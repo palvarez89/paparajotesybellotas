@@ -1,0 +1,5 @@
+[run]
+include = paparajotes_y_bellotas/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
