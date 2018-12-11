@@ -1,3 +1,4 @@
+{% load static i18n %}<!DOCTYPE html>
 <html>
 <head>
   <!-- META DATA -->
@@ -7,21 +8,23 @@
     <meta name="description" content="Free Bootstrap Themes by Zerotheme dot com - Free Responsive Html5 Templates">
     <meta name="author" content="https://www.Zerotheme.com">
 
-	<title>AZTransport - Free Bootstrap Themes</title>
+	<title>{% block title %}Paparajotes Y Bellotas{% endblock title %}</title>
   
+	{% block css %}
 	<!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"  type="text/css">
 	
 	<!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+	<link href="{% static 'owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+	<!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 	
 	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	
 	<!-- Custom Fonts -->
-    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	<link rel="stylesheet" href="{% static 'font-awesome-4.4.0/css/font-awesome.min.css' %}"  type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+	{% endblock %}
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,7 +94,7 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="images/banner1.jpg" alt="...">
+				<img src="{% static 'images/banner1.jpg' %}" alt="...">
 				<!-- Static Header -->
 				<div class="header-text hidden-xs">
 					<div class="col-md-12 text-center">
@@ -103,7 +106,7 @@
 				</div><!-- /header-text -->
 			</div>
 			<div class="item">
-				<img src="images/banner2.jpg" alt="...">
+				<img src="{% static 'images/banner2.jpg' %}" alt="...">
 				<!-- Static Header -->
 				<div class="header-text hidden-xs">
 					<div class="col-md-12 text-center">
@@ -115,7 +118,7 @@
 				</div><!-- /header-text -->
 			</div>
 			<div class="item">
-				<img src="images/banner3.jpg" alt="...">
+				<img src="{% static 'images/banner3.jpg' %}" alt="...">
 				<!-- Static Header -->
 				<div class="header-text hidden-xs">
 					<div class="col-md-12 text-center">
@@ -142,6 +145,9 @@
 	
 	<!-- /////////////////////////////////////////Content -->
 	<div id="page-content">
+	{% block content %}
+		<p>Use this document as a way to quick start any new project.</p>
+	{% endblock content %}
 
 	</div>
 
@@ -150,25 +156,25 @@
 		<div class="top-footer">
 			<div id="owl-brand" class="owl-carousel">
 				<div class="item">
-					<a href="single.html"><img src="images/15.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/15.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/16.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/16.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/17.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/17.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/18.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/18.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/19.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/19.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/20.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/20.jpg' %}" /></a>
 				</div>
 				<div class="item">
-					<a href="single.html"><img src="images/21.jpg" /></a>
+					<a href="single.html"><img src="{% static 'images/21.jpg' %}" /></a>
 				</div>
 			</div>
 		</div>
@@ -259,20 +265,21 @@
 		</div>
 	</footer>
   
+	{% block javascript %}
 	<!-- jQuery -->
-	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.1.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 	
 	<!-- Custom Theme JavaScript -->
-	<script src="js/agency.js"></script>
+	<script src="{% static 'js/agency.js' %}"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="js/jquery.easing.min.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+	<script src="{% static 'js/classie.js' %}"></script>
+	<script src="{% static 'js/cbpAnimatedHeader.js' %}"></script>
 	
 	<!-- carousel -->
-	<script src="owl-carousel/owl.carousel.js"></script>
+	<script src="{% static 'owl-carousel/owl.carousel.js' %}"></script>
     <script>
     $(document).ready(function() {
       $("#owl-brand").owlCarousel({
@@ -286,5 +293,6 @@
       });
     });
     </script>
+	{% endblock javascript %}
 </body>
 </html>
