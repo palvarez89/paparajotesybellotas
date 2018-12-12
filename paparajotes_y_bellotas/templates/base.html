@@ -1,114 +1,304 @@
 {% load static i18n %}<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}Paparajotes Y Bellotas{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html>
+<head>
+  <!-- META DATA -->
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free Bootstrap Themes by Zerotheme dot com - Free Responsive Html5 Templates">
+    <meta name="author" content="https://www.Zerotheme.com">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<title>{% block title %}Paparajotes Y Bellotas{% endblock title %}</title>
+  
+	{% block css %}
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"  type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+	<link href="{% static 'owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+	<!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="{% static 'font-awesome-4.4.0/css/font-awesome.min.css' %}"  type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+	{% endblock %}
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
     <![endif]-->
+	
+</head>
 
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+ <body>
+<header>
 
-    {% block css %}
-    
-    <!-- Latest compiled and minified Bootstrap 4.1.1 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
+	<!-- /////////////////////////////////////////Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="{% url 'home'%}">Paparallotes</a>
+            </div>
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    
-    <!-- This file stores project-specific CSS -->
-    
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
-    
-    {% endblock %}
-
-  </head>
-
-  <body>
-
-    <div class="mb-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">Paparajotes Y Bellotas</a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'about' %}">About</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                        <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+                    </li>
+                    <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                        <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                        <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+                    </li>
+                    <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                        <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </nav>
+        <!-- /.container-fluid -->
+    </nav>
+	<!-- Navigation -->
 
-    </div>
+	<!-- CAROUSEL -->
+	<div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel" data-interval="4000">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+	 
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="{% static 'images/banner1.jpg' %}" alt="...">
+				<!-- Static Header -->
+				<div class="header-text hidden-xs">
+					<div class="col-md-12 text-center">
+						<h1>Your Favorite Source of Free Bootstrap Themes</h1>
+						<hr>
+						<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! <br/>Just download your template and start going, no strings attached!</p>
+						<a href="" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+					</div>
+				</div><!-- /header-text -->
+			</div>
+			<div class="item">
+				<img src="{% static 'images/banner2.jpg' %}" alt="...">
+				<!-- Static Header -->
+				<div class="header-text hidden-xs">
+					<div class="col-md-12 text-center">
+						<h1>Your Favorite Source of Free Bootstrap Themes</h1>
+						<hr>
+						<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! <br/>Just download your template and start going, no strings attached!</p>
+						<a href="" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+					</div>
+				</div><!-- /header-text -->
+			</div>
+			<div class="item">
+				<img src="{% static 'images/banner3.jpg' %}" alt="...">
+				<!-- Static Header -->
+				<div class="header-text hidden-xs">
+					<div class="col-md-12 text-center">
+						<h1>Your Favorite Source of Free Bootstrap Themes</h1>
+						<hr>
+						<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! <br/>Just download your template and start going, no strings attached!</p>
+						<a href="" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+					</div>
+				</div><!-- /header-text -->
+			</div>
+		</div>
+	 
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div> <!-- Carousel -->
+	
+</header>
 
-    <div class="container">
+	
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content">
+	{% block content %}
+		<p>Use this document as a way to quick start any new project.</p>
+	{% endblock content %}
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
+	</div>
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
+	<!-- FOOTER -->
+	<footer>
+		<div class="top-footer">
+			<div id="owl-brand" class="owl-carousel">
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/15.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/16.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/17.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/18.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/19.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/20.jpg' %}" /></a>
+				</div>
+				<div class="item">
+					<a href="single.html"><img src="{% static 'images/21.jpg' %}" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-footer col-md-3">
+						<h2 class="footer-title">About Us</h2>
+						<div class="textwidget">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan. <br> <br> 
+						Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</div>
+					</div> 
+					<div class="col-footer col-md-3 widget_recent_entries">
+						<h2 class="footer-title">Recent Posts</h2>
+						<ul>
+							<li><a href="#">MOST VISITED COUNTRIES</a></li>
+							<li><a href="#">5 PLACES THAT MAKE A GREAT HOLIDAY</a></li>
+							<li><a href="#">PEBBLE TIME STEEL IS ON TRACK TO SHIP IN JULY</a></li>
+							<li><a href="#">STARTUP COMPANY&#8217;S CO-FOUNDER TALKS ON HIS NEW PRODUCT</a></li>
+						</ul>
+					</div>
+					<div class="col-footer col-md-3">
+						<h2 class="footer-title">NEWS LETTER</h2>
+						If you want to receive our latest news send directly to your email, please leave your email address bellow. Subscription is free and you can cancel anytime.
+						<form action="#" method="post">
+							<input type="text" name="your-name" value="" size="40" placeholder="Your Email" />
+							<input type="submit" value="SUBSCRIBE" class="btn btn-3" />
+						</form>
+					</div>
+					<div class="col-footer col-md-3">
+						<h2 class="footer-title">Tags</h2>
+						<div class="footer-tags">
+							<a href="#">animals</a>
+							<a href="#">cooking</a>
+							<a href="#">countries</a>
+							<a href="#">city</a>
+							<a href="#">children</a>
+							<a href="#">home</a>
+							<a href="#">likes</a>
+							<a href="#">photo</a>
+							<a href="#">link</a>
+							<a href="#">law</a>
+							<a href="#">shopping</a>
+							<a href="#">skate</a>
+							<a href="#">scholl</a>
+							<a href="#">video</a>
+							<a href="#">travel</a>
+							<a href="#">images</a>
+							<a href="#">love</a>
+							<a href="#">lists</a>
+							<a href="#">makeup</a>
+							<a href="#">media</a>
+							<a href="#">password</a>
+							<a href="#">pagination</a>
+							<a href="#">wildlife</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<p>Copyright 20xx - Designed by <a href="https://www.Zerotheme.com">Zerotheme</a></p>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline social-buttons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li><a href="https://www.facebook.com/Zerotheme"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a>
+							</li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline quicklinks">
+							<li><a href="#">Privacy Policy</a>
+							</li>
+							<li><a href="#">Terms of Use</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+  
+	{% block javascript %}
+	<!-- jQuery -->
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.1.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	
+	<!-- Custom Theme JavaScript -->
+	<script src="{% static 'js/agency.js' %}"></script>
 
-    </div> <!-- /container -->
-
-    {% block modal %}{% endblock modal %}
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-      
-      <!-- Required by Bootstrap v4.1.1 -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-      
-
-      <!-- place project specific Javascript in this file -->
-      
-      <script src="{% static 'js/project.js' %}"></script>
-      
-
-    {% endblock javascript %}
-  </body>
+	<!-- Plugin JavaScript -->
+	<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+	<script src="{% static 'js/classie.js' %}"></script>
+	<script src="{% static 'js/cbpAnimatedHeader.js' %}"></script>
+	
+	<!-- carousel -->
+	<script src="{% static 'owl-carousel/owl.carousel.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 6,
+		itemsDesktop : [1199,4],
+        itemsDesktopSmall : [979,2],
+		navigation: true,
+		navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+		pagination: false
+      });
+    });
+    </script>
+	{% endblock javascript %}
+</body>
 </html>
- 
