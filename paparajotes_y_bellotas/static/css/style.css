@@ -380,3 +380,7 @@ a.btn:focus{outline: 0;}
 	margin: -20px 0 0;
 }
 
+/* Working around possible bug in bootstrap */
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
