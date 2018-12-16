@@ -130,6 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -249,3 +250,14 @@ SOCIALACCOUNT_ADAPTER = 'paparajotes_y_bellotas.users.adapters.SocialAccountAdap
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+LANGUAGE_CODE = 'es'
+
+from django.utils.translation import ugettext_lazy as _
+LANGUAGES = (
+    ('en', _('English')),
+    ('es', _('Spanish')),
+)
+
+LOCALE_PATHS = (
+    str(APPS_DIR('locale')),
+)
