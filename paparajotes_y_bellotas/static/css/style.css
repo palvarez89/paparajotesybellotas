@@ -384,3 +384,10 @@ a.btn:focus{outline: 0;}
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: 100%;
 }
+
+@media(max-width:768px) {
+    header .carousel {
+	padding-top: 50px
+    }
+
+}
