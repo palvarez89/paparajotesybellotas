@@ -1,3 +1,6 @@
+:root {
+    --main-color: #F05F40;
+}
 
 /*
 Free Bootstrap Themes : https://www.Zerotheme.com
@@ -81,11 +84,11 @@ input:not([type]), input[type="color"], input[type="email"], input[type="number"
 }
 
 .text-primary {
-    color: #f05f40;
+    color:  var(--main-color);
 }
 
 hr{max-width: 50px;
-    border-color: #f05f40;
+    border-color:  var(--main-color);
     border-width: 5px;}
 
 /* ---------------------------------------------------------------------------- */
@@ -93,7 +96,7 @@ hr{max-width: 50px;
 /* ---------------------------------------------------------------------------- */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background: none;}
 .navbar-default {border-color: transparent;background-color: #222;}
-.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive;color: #F05F40;}
+.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive;color:  var(--main-color);}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
@@ -101,10 +104,10 @@ hr{max-width: 50px;
 
 .navbar-default .navbar-collapse {border-color: rgba(255,255,255,.02);}
 
-.navbar-default .navbar-toggle {border: none;background-color: #F05F40;}
+.navbar-default .navbar-toggle {border: none;background-color:  var(--main-color);}
 .navbar-default .navbar-toggle span.icon-bar{background-color: #fff;}
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {background-color: #F05F40;}
+.navbar-default .navbar-toggle:focus {background-color:  var(--main-color);}
 
 .navbar-default .nav li a {text-transform: uppercase;font-family: Helvetica,Arial,sans-serif;font-weight: bold;letter-spacing: 1px;color: #ddd;}
 .navbar-default .nav li a:hover,
@@ -133,13 +136,13 @@ hr{max-width: 50px;
     .navbar-default.navbar-shrink {
         padding: 0;
         background-color: #fff;
-		border-bottom: 2px solid #F05F40;
+		border-bottom: 2px solid  var(--main-color);
     }
 	
 	.navbar-default.navbar-shrink .nav li a{color: #444;}
 	.navbar-default.navbar-shrink .nav li a:hover,
 	.navbar-default.navbar-shrink .nav li a:focus
-	{color: #F05F40;}
+	{color:  var(--main-color);}
 	
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
@@ -152,7 +155,7 @@ hr{max-width: 50px;
 .header-text h1{margin-top: 0;margin-bottom: 0;text-transform: uppercase;font-weight: 700;color: #fff;font-size: 65px;}
 .header-text hr{margin: 30px auto;}
 .header-text p{ margin-bottom: 50px;font-size: 18px;font-weight: 300;color: rgba(255,255,255,.7);}
-.header-text .btn-primary{background-color: #F05F40;border:none;padding: 10px 20px;}
+.header-text .btn-primary{background-color:  var(--main-color);border:none;padding: 10px 20px;}
 
 
 /* ---------------------------------------------------------------------------- */
@@ -178,7 +181,7 @@ box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.75);}
 .box-content.box-1 .box-item  .sub span{color: #F6515D;}
 .box-content.box-1 .box-item  .sub{float: left;font-size:15px;padding-left: 5px;}
 .box-content.box-1 .box-item  .btn-more{float: right;margin-top: 8px;}
-.box-content.box-1 .box-item  .btn-more .fa{color: #f05f40;}
+.box-content.box-1 .box-item  .btn-more .fa{color:  var(--main-color);}
 .box-content.box-1 .box-item  .btn-more .fa:hover{color: #333;}
 
 .box-content.box-2 .service-box {margin: 20px auto 0;}
@@ -291,7 +294,7 @@ footer ul.social-buttons li a{display: block;width: 35px;height: 35px;border-rad
 footer ul.social-buttons li a:hover{background-color: #17B3E8;color: #fff;}
 footer ul.social-buttons li a i{margin-top: 7px;}
 
-.footer-title:before {background-color: #F05F40;content: "";height: 1em;left: 0;margin-top: -0.5em;position: absolute;top: 50%;width: 3px;}
+.footer-title:before {background-color:  var(--main-color);content: "";height: 1em;left: 0;margin-top: -0.5em;position: absolute;top: 50%;width: 3px;}
 .footer-title {display: block;font-weight: bold;letter-spacing: 1px;margin-top: -5px;padding-left: 13px;position: relative;text-transform: uppercase;font-size: 14px;color: #fff;}
 
 .footer-tags a{color: #999; border: 1px solid #999; padding: 4px 10px;line-height: 2.2;font-size: 13px;text-transform: capitalize;}
