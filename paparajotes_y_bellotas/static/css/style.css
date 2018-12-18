@@ -1,7 +1,7 @@
 :root {
-    --main-color: #cdb9cd;
-    --main-color-dark: #d5c3d5;
-    --main-color-darker: #aa88aa;
+    --main-color: #c9d8e9;
+    --main-color-dark: #92b0d3;
+    --main-color-darker: #7199c7;
 }
 
 /*
@@ -106,7 +106,7 @@ hr{max-width: 50px;
 
 .navbar-default .navbar-collapse {border-color: rgba(255,255,255,.02);}
 
-.navbar-default .navbar-toggle {border: none;background-color:  var(--main-color);}
+.navbar-default .navbar-toggle {border: none;background-color:  var(--main-color-dark);}
 .navbar-default .navbar-toggle span.icon-bar{background-color: #fff;}
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {background-color:  var(--main-color);}
@@ -401,7 +401,7 @@ a.btn:focus{outline: 0;}
 
 }
 /* Change navbar burger color */
-.navbar-default .navbar-toggle span.icon-bar{background-color: #000;}
+.navbar-default .navbar-toggle span.icon-bar{background-color: #fff;}
 
 /* Count down */
 #clockdiv{
@@ -410,13 +410,13 @@ a.btn:focus{outline: 0;}
         font-weight: 100;
         text-align: center;
         font-size: 30px;
+        color: #fff;
 }
 
 #clockdiv > div{
         padding: 10px;
         border-radius: 3px;
         background:  var(--main-color-dark);
-        color:  var(--main-color-darker);
         display: inline-block;
 }
 
@@ -424,7 +424,6 @@ a.btn:focus{outline: 0;}
         padding: 15px;
         border-radius: 3px;
         background:  var(--main-color-darker);
-        color: #fff;
         display: inline-block;
 }
 
