@@ -393,15 +393,10 @@ a.btn:focus{outline: 0;}
     width: 100%;
 }
 
-/* Make carousel stay */
-@media(max-width:768px) {
-    header .carousel {
-	padding-top: 50px
-    }
-
-}
 /* Change navbar burger color */
 .navbar-default .navbar-toggle span.icon-bar{background-color: #fff;}
+/* Change navbar color */
+.navbar-default {border-color: transparent;background-color: #2228;}
 
 /* Count down */
 #clockdiv{
