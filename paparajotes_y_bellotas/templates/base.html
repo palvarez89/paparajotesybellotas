@@ -118,9 +118,13 @@
 	
 	<!-- /////////////////////////////////////////Content -->
 	<div id="page-content">
-	{% block content %}
+		<div class="container">
+
+			<img class="center-block" src="{% static 'images/plane-trail.jpg' %}" alt="...">
+		</div>
+		{% block content %}
 		<p>Use this document as a way to quick start any new project.</p>
-	{% endblock content %}
+		{% endblock content %}
 
 	</div>
 
