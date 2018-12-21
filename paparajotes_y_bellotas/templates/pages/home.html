@@ -21,6 +21,10 @@
 			    <span class="hours"></span>
 			    <div class="smalltext">{% trans 'Horas' %}</div>
 			  </div>
+			  <div>
+			    <span class="minutes"></span>
+			    <div class="smalltext">{% trans 'Minutos' %}</div>
+			  </div>
 			</div>
 
 		</div>
@@ -47,12 +51,14 @@ function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
 
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
