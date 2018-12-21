@@ -463,3 +463,25 @@ a.btn:focus{outline: 0;}
   font-weight: normal;
   font-style: normal;
 }
+
+/* Hand writing style*/
+.main-handwrite,
+.main-sub-handwrite {
+    color: #3f6896;
+    font-family: "AlexBrush";
+}
+
+.main-handwrite {
+    font-size: 60px;
+}
+.main-sub-handwrite {
+    font-size: 40px;
+}
+@media(max-width:768px) {
+    .main-handwrite {
+        font-size: 8vw;
+    }
+    .main-sub-handwrite {
+        font-size: 5vw;
+    }
+}
