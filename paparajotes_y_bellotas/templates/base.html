@@ -153,6 +153,17 @@
       });
     });
     </script>
+    <script>
+	$( document ).ready(function() {
+	    var heights = $(".row-eq-height div").map(function() {
+		return $(this).height();
+	    }).get(),
+
+	    maxHeight = Math.max.apply(null, heights);
+
+	    $(".row-eq-height div").height(maxHeight);
+	});
+    </script>
 	{% endblock javascript %}
 </body>
 </html>

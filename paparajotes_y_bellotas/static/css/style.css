@@ -428,6 +428,7 @@ a.btn:focus{outline: 0;}
 }
 
 /* Home header */
+.header,
 .main-subheader,
 .main-header {
 	color: #3f6896;
@@ -484,4 +485,23 @@ a.btn:focus{outline: 0;}
     .main-sub-handwrite {
         font-size: 5vw;
     }
+}
+
+/*maps */
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.center-fa {
+    text-align: center;
 }
