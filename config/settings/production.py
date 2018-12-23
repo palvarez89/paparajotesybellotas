@@ -177,3 +177,4 @@ LOGGING = {
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "/var/www/papybell/static")
