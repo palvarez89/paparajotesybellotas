@@ -4,7 +4,28 @@ from .base import env
 # GENERAL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+# Secret Key Generator
+if not hasattr(globals(), 'DJANGO_SECRET_KEY'):
+    import os
+    SECRET_FILE = os.path.join(ROOT_DIR, 'secret.txt')
+    try:
+        SECRET_KEY = open(SECRET_FILE).read().strip()
+    except EnvironmentError:
+        try:
+            from random import choice
+
+            SECRET_KEY = ''.join(
+                [choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
+            with open(SECRET_FILE, 'w') as secret:
+                secret.write(SECRET_KEY)
+                secret.close()
+        except EnvironmentError:
+            raise Exception(
+                'Please create a %s file with random characters to generate your secret key!' % SECRET_FILE)
+else:
+    SECRET_KEY = env('DJANGO_SECRET_KEY')
+
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['paparajotesybellotas.com'])
 
