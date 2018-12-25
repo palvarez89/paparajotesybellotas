@@ -505,3 +505,11 @@ a.btn:focus{outline: 0;}
 .center-fa {
     text-align: center;
 }
+
+/* header ratio on small screens*/
+@media(max-width:768px) {
+  .change-ratio{
+     margin-left: -20%;
+     width:120%;
+  }
+}
