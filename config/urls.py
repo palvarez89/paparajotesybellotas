@@ -18,11 +18,6 @@ urlpatterns = i18n_patterns(
         TemplateView.as_view(template_name="pages/location.html"),
         name="location",
     ),
-    path(
-        "toraixa/",
-        TemplateView.as_view(template_name="pages/toraixa.html"),
-        name="toraixa",
-    ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
