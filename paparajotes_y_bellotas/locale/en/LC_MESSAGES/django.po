@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-08 20:20+0000\n"
+"POT-Creation-Date: 2019-01-08 20:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -268,6 +268,18 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
+#: templates/base.html:61
+msgid "Inicio"
+msgstr "Home"
+
+#: templates/base.html:64
+msgid "Lugar"
+msgstr "Location"
+
+#: templates/base.html:67
+msgid "Toraixa 56"
+msgstr ""
+
 #: templates/base.html:73
 msgid "My Profile"
 msgstr ""
@@ -299,6 +311,46 @@ msgstr "Hours"
 #: templates/pages/home.html:30
 msgid "Minutos"
 msgstr "Minutes"
+
+#: templates/pages/location.html:10
+msgid "Donde alojarse"
+msgstr "Where to stay"
+
+#: templates/pages/location.html:17
+msgid "Agroturismo"
+msgstr "Agrotourism"
+
+#: templates/pages/location.html:25
+msgid "En el centro de Maó"
+msgstr "Mahon city centre"
+
+#: templates/pages/location.html:31
+msgid "Cerca de la playa"
+msgstr "Near the beach"
+
+#: templates/pages/location.html:38
+msgid "Otras zonas"
+msgstr "Other areas"
+
+#: templates/pages/location.html:39
+msgid "Zona Villacarlos"
+msgstr "Villacarlos Area"
+
+#: templates/pages/location.html:40
+msgid "Zona Mahón"
+msgstr "Mahón Area"
+
+#: templates/pages/location.html:41
+msgid "Zona Santa Ana y Sol del Este"
+msgstr "Santa Ana and Sol del Este Areas"
+
+#: templates/pages/location.html:42
+msgid "Zona Cala San Esteban"
+msgstr "Cala San Esteban Area"
+
+#: templates/pages/location.html:43
+msgid "Zona S'Algar"
+msgstr "S'Algar Area"
 
 #: users/forms.py:17
 msgid "This username has already been taken."
