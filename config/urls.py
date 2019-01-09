@@ -6,6 +6,10 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from paparajotes_y_bellotas.views import (
+    location_view,
+)
+
 urlpatterns = i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
@@ -15,7 +19,7 @@ urlpatterns = i18n_patterns(
     ),
     path(
         "location/",
-        TemplateView.as_view(template_name="pages/location.html"),
+        view=location_view,
         name="location",
     ),
     # Django Admin, use {% url 'admin:index' %}
