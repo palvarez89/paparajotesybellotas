@@ -12,6 +12,9 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
+    "192.168.1.40",
+    "192.168.1.111",
+    "testserver",
 ]
 
 # DATABASES

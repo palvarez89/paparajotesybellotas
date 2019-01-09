@@ -514,3 +514,14 @@ a.btn:focus{outline: 0;}
      width:120%;
   }
 }
+/* Modals full screen */
+@media(max-width:768px) {
+  .modal-body {
+    padding: 5px
+  }
+}
+@media(min-width:768px) {
+.modal-dialog {
+  min-width: 80%;
+  max-height: 90%;
+}
