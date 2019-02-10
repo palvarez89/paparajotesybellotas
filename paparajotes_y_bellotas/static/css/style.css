@@ -466,6 +466,20 @@ a.btn:focus{outline: 0;}
   font-style: normal;
 }
 
+
+/* Normal text style */
+div.normal-box {
+    text-align: center;
+}
+
+.normal-box p {
+    color: #3f6896;
+    font-size: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Hand writing style*/
 .main-handwrite,
 .main-sub-handwrite {
