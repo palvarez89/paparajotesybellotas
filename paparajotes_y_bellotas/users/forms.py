@@ -1,14 +1,33 @@
 from django.contrib.auth import get_user_model, forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
+from django.forms.models import inlineformset_factory, BaseInlineFormSet
+from django.forms import ModelForm, CharField
+
+from paparajotes_y_bellotas.users import models
+
 
 User = get_user_model()
 
 
-class UserChangeForm(forms.UserChangeForm):
+class UserChangeForm(ModelForm):
 
-    class Meta(forms.UserChangeForm.Meta):
+    class Meta:
         model = User
+        fields = ["mensaje", "firma"]
+
+class BaseInvitadoFormset(ModelForm):
+
+    nombre = CharField(disabled=True)
+    class Meta:
+        model = models.Invitado
+        fields = []
+
+    def add_fields(self, form, index):
+        super(BaseInvitadoFormset, self).add_fields(form, index)
+
+
+InvitadoFormset = inlineformset_factory(models.User, models.Invitado, form=BaseInvitadoFormset, fields=["nombre", "asiste", "autobus"], extra=0, can_delete=False)
 
 
 class UserCreationForm(forms.UserCreationForm):
