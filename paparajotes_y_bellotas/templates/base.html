@@ -66,7 +66,6 @@
                     <li>
                         <a class="nav-item" href="{% url 'tips' %}">{% trans "Tips" %}</a>
                     </li>
-		    <!--
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
                     {# URL provided by django-allauth/account/urls.py #}
@@ -79,14 +78,9 @@
                     {% else %}
                     <li class="nav-item">
                     {# URL provided by django-allauth/account/urls.py #}
-                        <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-                    </li>
-                    <li class="nav-item">
-                    {# URL provided by django-allauth/account/urls.py #}
-                        <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+                        <a id="log-in-link" class="nav-item" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
                     </li>
                     {% endif %}
-		    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
