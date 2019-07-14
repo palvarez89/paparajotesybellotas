@@ -40,6 +40,7 @@ h1,h2,h3,h4,h5,h6 {font-weight: 600;color: #111;}
 
 p { color:#816943;}
 
+
 a {
    color: #17B3E8;
    -webkit-transition: all .2s ease-in-out;
@@ -49,6 +50,10 @@ a {
 
 a:hover,
 a:focus {color: #666;text-decoration: none;}
+
+.themed-links a {
+   color:#816943;
+}
 
 input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"], textarea, .form-control, select {
     border: 2px solid #E7E7E7;
