@@ -3,7 +3,25 @@
 {% block content %}
 <!-- Content from location.html -->
 
+{% get_current_language as LANGUAGE_CODE %}
+
 <section class="box-content box-1 box-style-1" id="portfolio">
+	<div class="container">
+		<div class="row heading">
+			 <div class="col-lg-12">
+				<h2 class="header">{% trans "Itinerario" %}</h2>
+				<hr class="line02">
+				<div class="normal-box">
+					{% with "images/itinerario-"|add:LANGUAGE_CODE|add:".png" as itinerario %}
+						<a href="{% static itinerario %}"><img src="{% static itinerario %}" alt="..."></a>
+					{% endwith %}
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row heading">
 			 <div class="col-lg-12">
@@ -17,7 +35,7 @@ La finca está situada a 3 minutos en coche del centro del municipio des Castell
 <p>
 La ceremonia y la celebración tendrán lugar en esta finca típica menorquina, de más de 150 años de antigüedad restaurada en el año 2014.
 </p>
-			</div>
+				</div>
 			</div>
 		</div>
 		<div class="no-gutter">
