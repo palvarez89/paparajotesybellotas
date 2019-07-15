@@ -31,10 +31,12 @@ ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['www.paparajotesybello
 
 # DATABASES
 # ------------------------------------------------------------------------------
+SITE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'weddb',
+        'NAME': os.path.join(SITE_ROOT, 'weddb'),
     }
 }
 
