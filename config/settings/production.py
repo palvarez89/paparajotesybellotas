@@ -125,50 +125,58 @@ INSTALLED_APPS += ['gunicorn']  # noqa F405
 # https://github.com/antonagestam/collectfast#installation
 INSTALLED_APPS = ['collectfast'] + INSTALLED_APPS  # noqa F405
 
-
-# LOGGING
-# ------------------------------------------------------------------------------
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See https://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
+# Logging Configuration
+BASE_LOG_PATH = os.environ.get("PAPYBELL_LOGS_PATH", "/var/log/papybell/")
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
     'formatters': {
-        'verbose': {
-            'format': '%(levelname)s %(asctime)s %(module)s '
-                      '%(process)d %(thread)d %(message)s'
+        'standard': {
+            'format': '[%(asctime)s.%(msecs)03d] %(levelname)s %(name)s:%(module)s.%(funcName)s | %(message)s',
+            'datefmt': '%Y%m%d %H:%M:%S',
         },
     },
     'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+        'log_file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(BASE_LOG_PATH, 'papybell_log.txt'),
+            'maxBytes': 1024 * 1024 * 30,  # 30 MB
+            'backupCount': 5,
         },
-        'console': {
+        'error_log_file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(BASE_LOG_PATH, 'papybell_err.txt'),
+            'maxBytes': 1024 * 1024 * 30,  # 30 MB
+            'backupCount': 5,
+        },
+        'debug_log_file': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(BASE_LOG_PATH, 'papybell_debug.txt'),
+            'maxBytes': 1024 * 1024 * 30,  # 30 MB
+            'backupCount': 5,
         },
     },
     'loggers': {
-        'django': {
+        'django.request': {
+            'handlers': ['debug_log_file'],
             'level': 'DEBUG',
-            'handlers': ['console', 'mail_admins'],
-            'propagate': True
-        }
+        },
+        'paparajotes_y_bellotas': {
+            'handlers': ['debug_log_file'],
+            'level': 'DEBUG',
+        },
+        '': {
+            'handlers': ['log_file', 'error_log_file'],
+            'level': 'DEBUG',
+        },
     }
 }
-
 
 # Your stuff...
 # ------------------------------------------------------------------------------
