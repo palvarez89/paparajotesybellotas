@@ -544,3 +544,9 @@ div.normal-box {
   min-width: 80%;
   max-height: 90%;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
