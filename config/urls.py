@@ -8,10 +8,15 @@ from django.views import defaults as default_views
 
 from paparajotes_y_bellotas.views import (
     location_view,
+    homepage_view,
 )
 
 urlpatterns = i18n_patterns(
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path(
+        "",
+        view=homepage_view,
+        name="home",
+    ),
     path(
         "about/",
         TemplateView.as_view(template_name="pages/about.html"),

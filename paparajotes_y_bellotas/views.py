@@ -12,3 +12,6 @@ def location_view(request):
     all_images_full = [urllib.parse.urljoin(base_images_path, img) for img in all_images]
 
     return render_to_response('pages/location.html', {'venue_images': all_images_full})
+
+def homepage_view(request):
+    return render_to_response('pages/home.html')
