@@ -3,6 +3,8 @@ import urllib
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.shortcuts import render_to_response
 
+from paparajotes_y_bellotas.users import models
+
 def location_view(request):
     dirpath = os.path.dirname(os.path.realpath(__file__))
     base_images_path = "images/venue/"
@@ -14,4 +16,6 @@ def location_view(request):
     return render_to_response('pages/location.html', {'venue_images': all_images_full})
 
 def homepage_view(request):
-    return render_to_response('pages/home.html')
+    query_results = models.User.objects.all()
+    mensajes = [u.mensaje for u in query_results]
+    return render_to_response('pages/home.html', {'mensajes': mensajes})

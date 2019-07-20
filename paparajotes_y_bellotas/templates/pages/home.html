@@ -8,7 +8,7 @@
 			 <div class="col-lg-12">
 			    <h2 class="main-subheader">{% trans 'Despues de tantas vueltas...' %}</h2>
 			    <h1 class="main-header">{% trans 'Nos casamos!!' %}</h2>
-	                    <hr>
+	                    <hr class="line02">
 			 <div class="normal-box">
 <p>Menorca se convirtió en un destino especial para los dos desde nuestro primer viaje a la isla en 2014. Fue nuestro primer destino de verano como pareja!</p>
 
@@ -50,6 +50,42 @@
 
 		</div>
 	</div>
+</section>
+
+<section class="box-content box-1 box-style-1">
+        <div class="container">
+                <div class="row heading">
+                         <div class="col-lg-12">
+                                <h2 class="header">{% trans "Lo que dicen de ellos" %}</h2>
+                                <hr class="line02">
+                        </div>
+                </div>
+                <div class="row">
+			{% for m in mensajes %}
+			<td>{{ m }}</td>
+			{% endfor %}
+		</div>
+
+	</div>
+	<div class="container">
+	    <blockquote class="quote-box">
+	      <p class="quotation-mark">
+	        “
+	      </p>
+	      <p class="quote-text">
+	        Don't believe anything that you read on the internet, it may be fake.
+	      </p>
+	      <hr>
+	      <div class="blog-post-actions">
+	        <p class="quote-text-colour blog-post-bottom pull-left">
+	          Abraham Lincoln
+	        </p>
+	        <p class="quote-text-colour blog-post-bottom pull-right">
+	          <span class="badge quote-badge">896</span>  ❤
+	        </p>
+	      </div>
+	    </blockquote>
+</div>
 </section>
 
 <script>

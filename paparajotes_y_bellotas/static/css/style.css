@@ -95,9 +95,11 @@ input:not([type]), input[type="color"], input[type="email"], input[type="number"
     color:  var(--main-color);
 }
 
-hr{max-width: 50px;
+hr.line02 {
+    max-width: 50px;
     border-color:  var(--main-color-darker);
-    border-width: 5px;}
+    border-width: 5px;
+}
 
 /* ---------------------------------------------------------------------------- */
 /* ----------------------------------Navbar------------------------------------ */
@@ -540,9 +542,10 @@ div.normal-box {
   }
 }
 @media(min-width:768px) {
-.modal-dialog {
-  min-width: 80%;
-  max-height: 90%;
+  .modal-dialog {
+    min-width: 80%;
+    max-height: 90%;
+  }
 }
 
 .center {
@@ -550,3 +553,45 @@ div.normal-box {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* quotes */
+blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote-box{
+    line-height: 1.42857143;
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #4ADFCC;
+    margin-top: 25px;
+    color:white;
+    width: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.quotation-mark{
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.quote-text-colour{
+    color: white;
+}
+
+.quote-text{
+    font-size: 19px;
+    margin-top: -65px;
+    color: white;
+}
+/* end quotes */
