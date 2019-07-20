@@ -8,7 +8,7 @@
 			 <div class="col-lg-12">
 			    <h2 class="main-subheader">{% trans 'Despues de tantas vueltas...' %}</h2>
 			    <h1 class="main-header">{% trans 'Nos casamos!!' %}</h2>
-	                    <hr>
+	                    <hr class="line02">
 			 <div class="normal-box">
 <p>Menorca se convirtió en un destino especial para los dos desde nuestro primer viaje a la isla en 2014. Fue nuestro primer destino de verano como pareja!</p>
 
@@ -51,6 +51,46 @@
 		</div>
 	</div>
 </section>
+
+{% if quotes %}
+<section class="box-content box-1 box-style-1">
+        <div class="container">
+                <div class="row heading">
+                         <div class="col-lg-12">
+                                <h2 class="header">{% trans "Lo que dicen de los novios" %}</h2>
+                                <hr class="line02">
+                        </div>
+                </div>
+	</div>
+	<div class="container">
+                <div class="row">
+		{% for q in quotes %}
+	        <div class="col-lg-6">
+
+		<blockquote class="quote-box">
+		  <p class="quotation-mark">“</p>
+		  <p class="quote-text">
+			{{ q.mensaje }}
+		  </p>
+		  <hr>
+		  <div class="blog-post-actions">
+			<p class="quote-text-colour blog-post-bottom pull-left">
+			</p>
+			<p class="quote-text-colour blog-post-bottom pull-right">
+				{{ q.firma }}
+			</p>
+
+		  </div>
+		</blockquote>
+		</div>
+		{% if forloop.counter|divisibleby:"2" and not forloop.last %}
+		</div><div class="row">
+		{% endif %}
+		{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
 
 <script>
 function getTimeRemaining(endtime) {
