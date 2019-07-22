@@ -61,31 +61,29 @@
                         </div>
                 </div>
                 <div class="row">
-			{% for m in mensajes %}
-			<td>{{ m }}</td>
-			{% endfor %}
-		</div>
+			{% for q in quotes %}
 
 	</div>
 	<div class="container">
-	    <blockquote class="quote-box">
-	      <p class="quotation-mark">
-	        “
-	      </p>
-	      <p class="quote-text">
-	        Don't believe anything that you read on the internet, it may be fake.
-	      </p>
-	      <hr>
-	      <div class="blog-post-actions">
-	        <p class="quote-text-colour blog-post-bottom pull-left">
-	          Abraham Lincoln
-	        </p>
-	        <p class="quote-text-colour blog-post-bottom pull-right">
-	          <span class="badge quote-badge">896</span>  ❤
-	        </p>
-	      </div>
-	    </blockquote>
-</div>
+		<blockquote class="quote-box">
+		  <p class="quotation-mark">“</p>
+		  <p class="quote-text">
+		  	{{ q.mensaje }}
+		  </p>
+		  <hr>
+		  <div class="blog-post-actions">
+			<p class="quote-text-colour blog-post-bottom pull-left">
+				{{ q.firma }}
+			</p>
+			<p class="quote-text-colour blog-post-bottom pull-right">
+				 <span class="badge quote-badge">896</span>  ❤
+			</p>
+
+		  </div>
+		</blockquote>
+	</div>
+			{% endfor %}
+		</div>
 </section>
 
 <script>

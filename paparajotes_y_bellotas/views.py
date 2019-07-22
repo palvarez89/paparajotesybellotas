@@ -17,5 +17,7 @@ def location_view(request):
 
 def homepage_view(request):
     query_results = models.User.objects.all()
-    mensajes = [u.mensaje for u in query_results]
-    return render_to_response('pages/home.html', {'mensajes': mensajes})
+
+    quotes = [{'mensaje': u.mensaje, 'firma': u.firma} for u in query_results if len(u.mensaje) > 4]
+    
+    return render_to_response('pages/home.html', {'quotes': quotes})
