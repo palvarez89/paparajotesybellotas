@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 01:30+0000\n"
+"POT-Creation-Date: 2019-08-12 21:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,36 +109,16 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:44 templates/base.html:86
+#: templates/account/login.html:20 templates/base.html:81
 msgid "Sign In"
 msgstr ""
 
-#: templates/account/login.html:16
-#, python-format
-msgid ""
-"Please sign in with one\n"
-"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
-"up</a>\n"
-"for a %(site_name)s account and sign in below:"
-msgstr ""
-
-#: templates/account/login.html:26
-msgid "or"
-msgstr ""
-
-#: templates/account/login.html:33
-#, python-format
-msgid ""
-"If you have not created an account yet, then please\n"
-"<a href=\"%(signup_url)s\">sign up</a> first."
-msgstr ""
-
-#: templates/account/login.html:43
+#: templates/account/login.html:19
 msgid "Forgot Password?"
 msgstr ""
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
-#: templates/account/logout.html:17 templates/base.html:77
+#: templates/account/logout.html:17 templates/base.html:76
 msgid "Sign Out"
 msgstr ""
 
@@ -214,7 +194,6 @@ msgid "Signup"
 msgstr ""
 
 #: templates/account/signup.html:9 templates/account/signup.html:19
-#: templates/base.html:82
 msgid "Sign Up"
 msgstr ""
 
@@ -273,14 +252,14 @@ msgid "Inicio"
 msgstr "Home"
 
 #: templates/base.html:64
-msgid "La Masía"
-msgstr ""
+msgid "El Gran Día"
+msgstr "Our Big Day"
 
 #: templates/base.html:67
 msgid "Tips"
 msgstr ""
 
-#: templates/base.html:73
+#: templates/base.html:72
 msgid "My Profile"
 msgstr ""
 
@@ -312,11 +291,34 @@ msgstr "Hours"
 msgid "Minutos"
 msgstr "Minutes"
 
-#: templates/pages/location.html:10
+#: templates/pages/location.html:19
+msgid "Itinerario"
+msgstr "Agenda"
+
+#: templates/pages/location.html:35
 msgid "Toraixa 56"
 msgstr ""
 
-#: templates/pages/location.html:58
+#: templates/pages/location.html:39
+msgid ""
+"\n"
+"La finca está situada a 3 minutos en coche del centro del municipio des "
+"Castell, primer municipio de España en ver salir el sol, en una zona rural, "
+"cercana al mar y a construcciones prehistóricas.\n"
+msgstr ""
+"\n"
+"The venue is just a 5 minutes drive from Es Castell, "
+"the first municipality in Spain to see the sun rise, in "
+"a rural area, close to the sea and prehistoric buildings.\n"
+
+#: templates/pages/location.html:45
+msgid ""
+"\n"
+"La ceremonia y la celebración tendrán lugar en esta finca típica menorquina, "
+"de más de 150 años de antigüedad restaurada en el año 2014.\n"
+msgstr ""
+
+#: templates/pages/location.html:87
 msgid "Cómo llegar"
 msgstr "How to get there"
 
@@ -360,10 +362,46 @@ msgstr "Cala San Esteban Area"
 msgid "Zona S'Algar"
 msgstr "S'Algar Area"
 
-#: users/forms.py:17
+#: templates/pages/tips.html:52
+msgid "Servicios de interés"
+msgstr "Services"
+
+#: templates/pages/tips.html:59
+msgid "Peluquería y maquillaje"
+msgstr "Hair & Make Up"
+
+#: users/forms.py:36
 msgid "This username has already been taken."
 msgstr ""
 
-#: users/models.py:11
+#: users/models.py:12
 msgid "Name of User"
 msgstr ""
+
+#: users/models.py:14
+msgid "Mensaje"
+msgstr "Message"
+
+#: users/models.py:15
+msgid "Firma"
+msgstr "Signature"
+
+#: users/models.py:22
+msgid "Nombre"
+msgstr "Name"
+
+#: users/models.py:23
+msgid "Confirmada asistencia"
+msgstr "RSVP"
+
+#: users/models.py:24
+msgid "Autobus"
+msgstr "Bus"
+
+#: users/models.py:25
+msgid "Notas"
+msgstr "Notes"
+
+#: users/models.py:26
+msgid "Es menor"
+msgstr "Under-age"
