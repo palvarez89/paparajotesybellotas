@@ -317,6 +317,9 @@ msgid ""
 "La ceremonia y la celebración tendrán lugar en esta finca típica menorquina, "
 "de más de 150 años de antigüedad restaurada en el año 2014.\n"
 msgstr ""
+"\n"
+"The ceremony and celebration will happen in this typical Menorcan house, "
+"more than 150 years old, and restored in 2014.\n"
 
 #: templates/pages/location.html:87
 msgid "Cómo llegar"
