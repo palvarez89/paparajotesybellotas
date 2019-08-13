@@ -56,14 +56,16 @@
         <div class="container">
                 <div class="row heading">
                          <div class="col-lg-12">
-                                <h2 class="header">{% trans "Lo que dicen de ellos" %}</h2>
+                                <h2 class="header">{% trans "Lo que dicen de los novios" %}</h2>
                                 <hr class="line02">
                         </div>
                 </div>
-                <div class="row">
 	</div>
-	{% for q in quotes %}
 	<div class="container">
+                <div class "row">
+		{% for q in quotes %}
+	        <div class="col-lg-4 col-sm-6">
+
 		<blockquote class="quote-box">
 		  <p class="quotation-mark">“</p>
 		  <p class="quote-text">
@@ -79,9 +81,10 @@
 
 		  </div>
 		</blockquote>
-	</div>
-	{% endfor %}
 		</div>
+		{% endfor %}
+		</div>
+	</div>
 </section>
 
 <script>
