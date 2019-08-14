@@ -1,4 +1,5 @@
 import os
+import random
 import urllib
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.shortcuts import render_to_response
@@ -20,4 +21,5 @@ def homepage_view(request):
 
     quotes = [{'mensaje': u.mensaje, 'firma': u.firma} for u in query_results if len(u.mensaje) > 4]
 
+    random.shuffle(quotes)
     return render_to_response('pages/home.html', {'quotes': quotes})
