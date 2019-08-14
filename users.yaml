@@ -1,0 +1,12 @@
+---
+users:
+- username: user1
+  password: pass1
+  invitados:
+  - nombre: Invitado 1A
+  - nombre: Invitado 1B
+- username: user2
+  password: pass2
+  invitados:
+  - nombre: Invitado 2A
+  - nombre: Invitado 2B

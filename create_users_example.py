@@ -1,5 +1,6 @@
 import django
 import os
+import yaml
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 django.setup()
@@ -7,21 +8,25 @@ django.setup()
 from django.contrib.auth.hashers import make_password
 from paparajotes_y_bellotas.users import models
 
-new_user = models.User(
-    username="user",
-    email='sample@email.co.uk',
-    password=make_password('pass'),
-    is_active=True,
-)
-new_user.save()
+with open("users.yaml", 'r') as f:
+    try:
+        file_contents = yaml.safe_load(f)
+    except Exception as e:
+        print("Failed to load yaml: %s" % e)
+        exit(1)
 
-inva = models.Invitado()
-inva.nombre = "B"
-invb = models.Invitado()
-invb.nombre = "E"
+users = file_contents['users']
+for user in users:
+    new_user = models.User(
+        username=user['username'],
+        email='none@none.co.uk',
+        password=make_password(user['password']),
+        is_active=True,
+    )
+    new_user.save()
 
-inva.user = new_user
-invb.user = new_user
-
-inva.save()
-invb.save()
+    for invitado in user['invitados']:
+        inv = models.Invitado()
+        inv.nombre = invitado['nombre']
+        inv.user = new_user
+        inv.save()
