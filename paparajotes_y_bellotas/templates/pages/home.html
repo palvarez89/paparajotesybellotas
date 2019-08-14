@@ -52,6 +52,7 @@
 	</div>
 </section>
 
+{% if quotes %}
 <section class="box-content box-1 box-style-1">
         <div class="container">
                 <div class="row heading">
@@ -62,9 +63,9 @@
                 </div>
 	</div>
 	<div class="container">
-                <div class "row">
+                <div class="row">
 		{% for q in quotes %}
-	        <div class="col-lg-4 col-sm-6">
+	        <div class="col-lg-6">
 
 		<blockquote class="quote-box">
 		  <p class="quotation-mark">“</p>
@@ -82,10 +83,14 @@
 		  </div>
 		</blockquote>
 		</div>
+		{% if forloop.counter|divisibleby:"2" and not forloop.last %}
+		</div><div class="row">
+		{% endif %}
 		{% endfor %}
 		</div>
 	</div>
 </section>
+{% endif %}
 
 <script>
 function getTimeRemaining(endtime) {
