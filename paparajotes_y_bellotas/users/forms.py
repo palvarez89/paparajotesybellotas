@@ -27,7 +27,7 @@ class BaseInvitadoFormset(ModelForm):
         super(BaseInvitadoFormset, self).add_fields(form, index)
 
 
-InvitadoFormset = inlineformset_factory(models.User, models.Invitado, form=BaseInvitadoFormset, fields=["nombre", "asiste", "autobus"], extra=0, can_delete=False)
+InvitadoFormset = inlineformset_factory(models.User, models.Invitado, form=BaseInvitadoFormset, fields=["nombre", "asiste", "autobus", "llegada", "salida"], extra=0, can_delete=False)
 
 
 class UserCreationForm(forms.UserCreationForm):

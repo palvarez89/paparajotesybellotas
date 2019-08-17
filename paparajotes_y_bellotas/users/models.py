@@ -1,8 +1,9 @@
 from django.contrib.auth.models import AbstractUser
-from django.db.models import CharField, BooleanField, Model, ForeignKey
+from django.db.models import CharField, BooleanField, Model, ForeignKey, DateTimeField
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
+import datetime
 
 
 class User(AbstractUser):
@@ -25,6 +26,8 @@ class Invitado(Model):
     notas = models.CharField(_("Notas"), blank=True, max_length=1000)
     es_menor = models.BooleanField(_("Es menor"), default=False)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+    llegada = models.DateTimeField(_("Llegada"), default=datetime.datetime(2000, 1, 1, 0, 0))
+    salida = models.DateTimeField(_("Salida"), default=datetime.datetime(2000, 1, 1, 0, 0))
 
     def __str__(self):
         return "%s (%s)" % (self.nombre, self.user.username)
