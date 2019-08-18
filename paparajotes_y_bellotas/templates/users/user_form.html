@@ -51,18 +51,30 @@
                   </thead>
               {% endif %}
               <tr class="row formset_row">
-                  {% for field in invform.visible_fields %}
-                      <td>
-                          {# Include the hidden fields in the form #}
-                          {% if forloop.first %}
-                              {% for hidden in invform.hidden_fields %}
-                                  {{ hidden }}
-                              {% endfor %}
-                          {% endif %}
-                          {{ field.errors.as_ul }}
-                          {{ field }}
-                      </td>
-                  {% endfor %}
+                  <td>
+                      {# Include the hidden fields in the form #}
+                      {% for hidden in invform.hidden_fields %}
+                          {{ hidden }}
+                      {% endfor %}
+                      {{ invform.errors.as_ul }}
+                      {{ invform.nombre.value }}
+                  </td>
+                  <td>
+                      {{ invform.asiste.errors.as_ul}}
+                      {{ invform.asiste }}
+                  </td>
+                  <td>
+                      {{ invform.autobue.errors.as_ul}}
+                      {{ invform.autobus }}
+                  </td>
+                  <td>
+                      {{ invform.llegada.errors.as_ul }}
+                      {{ invform.llegada }}
+                  </td>
+                  <td>
+                      {{ invform.salida.errors.as_ul }}
+                      {{ invform.salida }}
+                  </td>
               </tr>
           {% endfor %}
       </table>
