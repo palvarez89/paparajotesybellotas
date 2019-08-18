@@ -57,7 +57,9 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         if invitados.is_valid():
             invitados.instance = self.object
             invitados.save()
-        return super(UserUpdateView, self).form_valid(form)
+            return super(UserUpdateView, self).form_valid(form)
+        else:
+            return self.render_to_response(self.get_context_data(form=form))
 
 
 user_update_view = UserUpdateView.as_view()
