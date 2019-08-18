@@ -25,6 +25,10 @@
 	<link rel="stylesheet" href="{% static 'fontawesome-free-5.6.3-web/css/all.min.css' %}"  type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 	{% endblock %}
+
+	{% block morecss %}
+	{% endblock %}
+
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -164,6 +168,8 @@
 	});
     </script>
 	{% endblock javascript %}
+	{% block javascriptsources %}
+	{% endblock javascriptsources %}
 	<script>
 	{% block extrajs %}
 	{% endblock extrajs %}

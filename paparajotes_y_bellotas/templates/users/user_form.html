@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static i18n %}<!DOCTYPE html>
 {% load crispy_forms_tags %}
 
 {% block title %}{{ user.username }}{% endblock %}
@@ -87,4 +88,23 @@
 
   </div>
 </section>
+{% endblock %}
+
+{% block javascriptsources %}
+    <script type="text/javascript" src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+
+{% endblock %}
+
+{% block extrajs %}
+$('[id$=salida], [id$=llegada]').datepicker({
+    format: "dd/mm/yyyy",
+    startDate: "12/9/2019",
+    endDate: "26/9/2019",
+    maxViewMode: 1
+});
+
+{% endblock %}
+
+{% block morecss %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.min.css' %}"  type="text/css">
 {% endblock %}
