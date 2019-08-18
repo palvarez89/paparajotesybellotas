@@ -26,8 +26,8 @@ class Invitado(Model):
     notas = models.CharField(_("Notas"), blank=True, max_length=1000)
     es_menor = models.BooleanField(_("Es menor"), default=False)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    llegada = models.DateTimeField(_("Llegada"), default=datetime.datetime(2000, 1, 1, 0, 0))
-    salida = models.DateTimeField(_("Salida"), default=datetime.datetime(2000, 1, 1, 0, 0))
+    llegada = models.DateField(_("Llegada"), default=datetime.date(2019, 9, 21))
+    salida = models.DateField(_("Salida"), default=datetime.date(2019, 9, 21))
 
     def __str__(self):
         return "%s (%s)" % (self.nombre, self.user.username)
