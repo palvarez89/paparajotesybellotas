@@ -7,39 +7,65 @@
 <section class="box-content box-2">
   <div class="container">
 
-    <h1>{{ user.username }}</h1>
     <form class="form-horizontal" method="post" action="{% url 'users:update' %}">
       {% csrf_token %}
-      {{ form|crispy }}
-          <table class="table">
-              {{ invitados.management_form }}
 
-              {% for form in invitados.forms %}
-                  {% if forloop.first %}
-                      <thead>
-                      <tr class="row formset_row">
-                          {% for field in form.visible_fields %}
-                              <th>{{ field.label|capfirst }}</th>
-                          {% endfor %}
-                      </tr>
-                      </thead>
-                  {% endif %}
+      <div class="normal-box">
+          <p>
+          Hola <b>
+          {% for invform in invitados.forms %}
+              {% if not forloop.first %}y{% endif %}
+          {{ invform.nombre.value }}{% endfor %},
+          </b>
+          </p>
+
+          <br>
+
+          <p>
+          Aqui podeis escribir un mensaje que aparecera en la pagina
+          principal en el apartado <b>"Lo que dicen de los novios"</b>
+          </p>
+
+          <br>
+
+          <p>
+          Tambien, podeis confirmar si quereis una plaza en el autobus,
+          y ademas confirmar asistencia a algunas de las actividades que
+          tenemos programadas.
+          </p>
+      </div>
+      <br><br>
+      {{ form }}
+
+      <table class="table">
+          {{ invitados.management_form }}
+
+          {% for invform in invitados.forms %}
+              {% if forloop.first %}
+                  <thead>
                   <tr class="row formset_row">
-                      {% for field in form.visible_fields %}
-                          <td>
-                              {# Include the hidden fields in the form #}
-                              {% if forloop.first %}
-                                  {% for hidden in form.hidden_fields %}
-                                      {{ hidden }}
-                                  {% endfor %}
-                              {% endif %}
-                              {{ field.errors.as_ul }}
-                              {{ field }}
-                          </td>
+                      {% for field in invform.visible_fields %}
+                          <th>{{ field.label|capfirst }}</th>
                       {% endfor %}
                   </tr>
-              {% endfor %}
-          </table>
+                  </thead>
+              {% endif %}
+              <tr class="row formset_row">
+                  {% for field in invform.visible_fields %}
+                      <td>
+                          {# Include the hidden fields in the form #}
+                          {% if forloop.first %}
+                              {% for hidden in invform.hidden_fields %}
+                                  {{ hidden }}
+                              {% endfor %}
+                          {% endif %}
+                          {{ field.errors.as_ul }}
+                          {{ field }}
+                      </td>
+                  {% endfor %}
+              </tr>
+          {% endfor %}
+      </table>
       <div class="control-group">
         <div class="controls">
           <button type="submit" class="btn btn-primary">Update</button>
