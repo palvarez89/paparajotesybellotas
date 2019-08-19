@@ -6,6 +6,8 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from allauth.account import views as account_views
+
 from paparajotes_y_bellotas.views import (
     location_view,
     homepage_view,
@@ -39,7 +41,9 @@ urlpatterns = i18n_patterns(
         "users/",
         include("paparajotes_y_bellotas.users.urls", namespace="users"),
     ),
-    path("accounts/", include("allauth.urls")),
+    path("accounts/login/", account_views.login, name="account_login"),
+    path("accounts/login/", account_views.login, name="account_signup"),
+    path("accounts/logout/", account_views.logout, name="account_logout"),
     # Your stuff: custom urls includes go here
 ) + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
