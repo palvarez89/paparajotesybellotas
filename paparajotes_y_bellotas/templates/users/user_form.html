@@ -9,7 +9,7 @@
 <section class="box-content box-2">
   <div class="container">
 
-    <form class="form-horizontal" method="post" action="{% url 'users:update' %}">
+    <form class="form-horizontal" autocomplete='off' method="post" action="{% url 'users:update' %}">
       {% csrf_token %}
 
       <div class="normal-box">
