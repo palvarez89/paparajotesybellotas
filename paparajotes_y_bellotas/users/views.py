@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 from django.urls import reverse
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, ListView, RedirectView, UpdateView
 from django.db import transaction
 
@@ -66,10 +67,10 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
             invitados.save()
             parent_valid = super(UserUpdateView, self).form_valid(form)
             if parent_valid:
-                messages.success(self.request, 'Form submission successful')
+                messages.success(self.request, _("Datos actualizados correctamente"))
                 return parent_valid
         else:
-            messages.error(self.request, 'Form submission failed')
+            messages.error(self.request, _("Fallo al enviar los datos, revisa el formulario"))
             return self.render_to_response(self.get_context_data(form=form))
 
 

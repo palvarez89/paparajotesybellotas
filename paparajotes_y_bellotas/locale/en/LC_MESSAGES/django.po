@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-12 21:42+0000\n"
+"POT-Creation-Date: 2019-08-19 22:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,16 +109,12 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:20 templates/base.html:81
+#: templates/account/login.html:19 templates/base.html:85
 msgid "Sign In"
 msgstr ""
 
-#: templates/account/login.html:19
-msgid "Forgot Password?"
-msgstr ""
-
 #: templates/account/logout.html:5 templates/account/logout.html:8
-#: templates/account/logout.html:17 templates/base.html:76
+#: templates/account/logout.html:17 templates/base.html:80
 msgid "Sign Out"
 msgstr ""
 
@@ -193,7 +189,7 @@ msgstr ""
 msgid "Signup"
 msgstr ""
 
-#: templates/account/signup.html:9 templates/account/signup.html:19
+#: templates/account/signup.html:9
 msgid "Sign Up"
 msgstr ""
 
@@ -247,19 +243,19 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
-#: templates/base.html:61
+#: templates/base.html:65
 msgid "Inicio"
 msgstr "Home"
 
-#: templates/base.html:64
+#: templates/base.html:68
 msgid "El Gran Día"
 msgstr "Our Big Day"
 
-#: templates/base.html:67
+#: templates/base.html:71
 msgid "Tips"
 msgstr ""
 
-#: templates/base.html:72
+#: templates/base.html:76
 msgid "My Profile"
 msgstr ""
 
@@ -291,6 +287,10 @@ msgstr "Hours"
 msgid "Minutos"
 msgstr "Minutes"
 
+#: templates/pages/home.html:60
+msgid "Lo que dicen de los novios"
+msgstr "What people say about the couple"
+
 #: templates/pages/location.html:19
 msgid "Itinerario"
 msgstr "Agenda"
@@ -307,9 +307,9 @@ msgid ""
 "cercana al mar y a construcciones prehistóricas.\n"
 msgstr ""
 "\n"
-"The venue is just a 5 minutes drive from Es Castell, "
-"the first municipality in Spain to see the sun rise, in "
-"a rural area, close to the sea and prehistoric buildings.\n"
+"The venue is just a 5 minutes drive from Es Castell, the first municipality "
+"in Spain to see the sun rise, in a rural area, close to the sea and "
+"prehistoric buildings.\n"
 
 #: templates/pages/location.html:45
 msgid ""
@@ -377,34 +377,50 @@ msgstr "Hair & Make Up"
 msgid "This username has already been taken."
 msgstr ""
 
-#: users/models.py:12
+#: users/models.py:13
 msgid "Name of User"
 msgstr ""
 
-#: users/models.py:14
+#: users/models.py:15
 msgid "Mensaje"
 msgstr "Message"
 
-#: users/models.py:15
+#: users/models.py:16
 msgid "Firma"
 msgstr "Signature"
 
-#: users/models.py:22
+#: users/models.py:23
 msgid "Nombre"
 msgstr "Name"
 
-#: users/models.py:23
+#: users/models.py:24
 msgid "Confirmada asistencia"
 msgstr "RSVP"
 
-#: users/models.py:24
+#: users/models.py:25
 msgid "Autobus"
 msgstr "Bus"
 
-#: users/models.py:25
+#: users/models.py:26
 msgid "Notas"
 msgstr "Notes"
 
-#: users/models.py:26
+#: users/models.py:27
 msgid "Es menor"
 msgstr "Under-age"
+
+#: users/models.py:29
+msgid "Llegada"
+msgstr "Arriving"
+
+#: users/models.py:30
+msgid "Salida"
+msgstr "Leaving"
+
+#: users/views.py:70
+msgid "Datos actualizados correctamente"
+msgstr "Updated successfully"
+
+#: users/views.py:73
+msgid "Fallo al enviar los datos, revisa el formulario"
+msgstr "Failed to update, please check the form"
