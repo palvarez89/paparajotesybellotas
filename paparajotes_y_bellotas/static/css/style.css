@@ -73,6 +73,9 @@ input:not([type]), input[type="color"], input[type="email"], input[type="number"
 	background-color: transparent;
     border: 2px solid #444444;
 }
+input.is-invalid{
+    border: 2px solid #c72d2d;
+}
 
 .f-right{float: right;}
 .f-left{float: left;}

@@ -39,6 +39,15 @@
       <br><br>
       {{ form }}
 
+      {% for invform in invitados.forms %}
+          {% if invform.errors%}
+          <div class="alert alert-danger" role="alert">
+              {{ invform.nombre.value }}
+              {{ invform.errors.as_ul }}
+          </div>
+          {% endif %}
+      {% endfor %}
+
       <table class="table">
           {{ invitados.management_form }}
 
@@ -58,23 +67,18 @@
                       {% for hidden in invform.hidden_fields %}
                           {{ hidden }}
                       {% endfor %}
-                      {{ invform.errors.as_ul }}
                       {{ invform.nombre.value }}
                   </td>
                   <td>
-                      {{ invform.asiste.errors.as_ul}}
                       {{ invform.asiste }}
                   </td>
                   <td>
-                      {{ invform.autobue.errors.as_ul}}
                       {{ invform.autobus }}
                   </td>
                   <td>
-                      {{ invform.llegada.errors.as_ul }}
-                      {{ invform.llegada }}
+                      {{ invform.llegada|add_error_class:"is-invalid" }}
                   </td>
                   <td>
-                      {{ invform.salida.errors.as_ul }}
                       {{ invform.salida }}
                   </td>
               </tr>
