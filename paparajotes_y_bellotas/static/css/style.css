@@ -597,3 +597,8 @@ blockquote{
     color: white;
 }
 /* end quotes */
+
+/* Remove margins to alerts*/
+.alert {
+    margin-bottom: 0px;
+}

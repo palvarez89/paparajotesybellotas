@@ -39,15 +39,6 @@
       <br><br>
       {{ form }}
 
-      {% for invform in invitados.forms %}
-          {% if invform.errors%}
-          <div class="alert alert-danger" role="alert">
-              {{ invform.nombre.value }}
-              {{ invform.errors.as_ul }}
-          </div>
-          {% endif %}
-      {% endfor %}
-
       <table class="table">
           {{ invitados.management_form }}
 
@@ -84,6 +75,16 @@
               </tr>
           {% endfor %}
       </table>
+
+      {% for invform in invitados.forms %}
+          {% if invform.errors%}
+          <div class="alert alert-danger" role="alert">
+              {{ invform.nombre.value }}
+              {{ invform.errors.as_ul }}
+          </div>
+          {% endif %}
+      {% endfor %}
+
       <div class="control-group">
         <div class="controls">
           <button type="submit" class="btn btn-primary">Update</button>

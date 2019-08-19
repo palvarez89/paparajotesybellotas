@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 from django.urls import reverse
 from django.views.generic import DetailView, ListView, RedirectView, UpdateView
 from django.db import transaction
@@ -52,7 +53,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         return data
 
     def get_success_url(self):
-        return reverse("users:detail", kwargs={"username": self.request.user.username})
+        return reverse("users:update")
 
     def get_object(self):
         return User.objects.get(username=self.request.user.username)
@@ -63,8 +64,12 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         if invitados.is_valid():
             invitados.instance = self.object
             invitados.save()
-            return super(UserUpdateView, self).form_valid(form)
+            parent_valid = super(UserUpdateView, self).form_valid(form)
+            if parent_valid:
+                messages.success(self.request, 'Form submission successful')
+                return parent_valid
         else:
+            messages.error(self.request, 'Form submission failed')
             return self.render_to_response(self.get_context_data(form=form))
 
 
@@ -76,7 +81,7 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
     permanent = False
 
     def get_redirect_url(self):
-        return reverse("users:detail", kwargs={"username": self.request.user.username})
+        return reverse("users:update")
 
 
 user_redirect_view = UserRedirectView.as_view()
