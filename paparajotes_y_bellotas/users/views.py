@@ -1,15 +1,21 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.admin.views.decorators import staff_member_required
 from django.urls import reverse
 from django.views.generic import DetailView, ListView, RedirectView, UpdateView
 from django.db import transaction
-
 
 from paparajotes_y_bellotas.users import models
 from paparajotes_y_bellotas.users import forms
 from paparajotes_y_bellotas.users.forms import UserChangeForm, InvitadoFormset
 
 User = get_user_model()
+
+class StaffRequiredMixin(object):
+    @classmethod
+    def as_view(self, *args, **kwargs):
+        view = super(StaffRequiredMixin, self).as_view(*args, **kwargs)
+        return staff_member_required(view)
 
 
 class UserDetailView(LoginRequiredMixin, DetailView):
@@ -22,7 +28,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 user_detail_view = UserDetailView.as_view()
 
 
-class UserListView(LoginRequiredMixin, ListView):
+class UserListView(StaffRequiredMixin, ListView):
 
     model = User
     slug_field = "username"
