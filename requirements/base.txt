@@ -18,7 +18,7 @@ djangorestframework==3.9.0  # https://github.com/encode/django-rest-framework
 coreapi==2.3.3  # https://github.com/core-api/python-client
 
 # Tweak forms
-djago-widget-tweaks
+django-widget-tweaks
 
 # To read the users.yaml file and preload the DB
 #-----------------------------------------------
