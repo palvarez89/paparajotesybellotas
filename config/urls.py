@@ -34,6 +34,11 @@ urlpatterns = i18n_patterns(
         TemplateView.as_view(template_name="pages/tips.html"),
         name="tips",
     ),
+    path(
+        "theweek/",
+        TemplateView.as_view(template_name="pages/theweek.html"),
+        name="theweek",
+    ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
