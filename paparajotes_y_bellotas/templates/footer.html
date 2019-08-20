@@ -1,0 +1,44 @@
+{% load static i18n %}
+
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <div class="bottom-footer">
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+          Paparajotes y Bellotas, 20.09.2019
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <form name=setLangEng action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+              <input type="hidden" name="language" value="en"/>
+            </form>
+            <form name=setLangEsp action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+              <input type="hidden" name="language" value="es"/>
+            </form>
+            <a onclick="document.setLangEng.submit();return false;">ENGLISH</a>
+	    -
+            <a onclick="document.setLangEsp.submit();return false;">ESPAÑOL</a>
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+  </div>
+  <!-- Footer Elements -->
+
+</footer>
+<!-- Footer -->

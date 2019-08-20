@@ -44,10 +44,14 @@ urlpatterns = i18n_patterns(
     path("accounts/login/", account_views.login, name="account_login"),
     path("accounts/login/", account_views.login, name="account_signup"),
     path("accounts/logout/", account_views.logout, name="account_logout"),
+
+
     # Your stuff: custom urls includes go here
 ) + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-)
+) + [
+    path(r'^i18n/', include('django.conf.urls.i18n')),
+]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
