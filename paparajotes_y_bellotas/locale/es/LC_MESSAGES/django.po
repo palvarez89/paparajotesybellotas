@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-19 22:49+0000\n"
+"POT-Creation-Date: 2019-08-20 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -257,7 +257,7 @@ msgstr ""
 
 #: templates/base.html:76
 msgid "My Profile"
-msgstr ""
+msgstr "Mis Datos"
 
 #: templates/pages/home.html:9
 msgid "Despues de tantas vueltas..."
@@ -366,6 +366,53 @@ msgstr ""
 msgid "Peluquería y maquillaje"
 msgstr ""
 
+#: templates/users/user_form.html:17
+msgid "Hola"
+msgstr ""
+
+#: templates/users/user_form.html:19
+msgid "y"
+msgstr ""
+
+#: templates/users/user_form.html:27
+msgid ""
+"\n"
+"Aqui podéis escribir un mensaje que aparecera en la página\n"
+"principal en el apartado <b>\"Lo que dicen de los novios\"</b>\n"
+msgstr ""
+
+#: templates/users/user_form.html:36
+msgid ""
+"\n"
+"También, podéis confirmar si queréis una plaza en el autobus.\n"
+"Ademas, en unos dias, podréis confirmar asistencia a algunas\n"
+"de las actividades que tenemos programadas.\n"
+msgstr ""
+
+#: templates/users/user_form.html:53 users/models.py:23
+msgid "Nombre"
+msgstr ""
+
+#: templates/users/user_form.html:54 users/models.py:24
+msgid "Confirmada asistencia"
+msgstr ""
+
+#: templates/users/user_form.html:55 users/models.py:25
+msgid "Autobus"
+msgstr ""
+
+#: templates/users/user_form.html:56 users/models.py:29
+msgid "Llegada"
+msgstr ""
+
+#: templates/users/user_form.html:57 users/models.py:30
+msgid "Salida"
+msgstr ""
+
+#: templates/users/user_form.html:96
+msgid "Actualizar"
+msgstr ""
+
 #: users/forms.py:36
 msgid "This username has already been taken."
 msgstr ""
@@ -382,32 +429,12 @@ msgstr ""
 msgid "Firma"
 msgstr ""
 
-#: users/models.py:23
-msgid "Nombre"
-msgstr ""
-
-#: users/models.py:24
-msgid "Confirmada asistencia"
-msgstr ""
-
-#: users/models.py:25
-msgid "Autobus"
-msgstr ""
-
 #: users/models.py:26
 msgid "Notas"
 msgstr ""
 
 #: users/models.py:27
 msgid "Es menor"
-msgstr ""
-
-#: users/models.py:29
-msgid "Llegada"
-msgstr ""
-
-#: users/models.py:30
-msgid "Salida"
 msgstr ""
 
 #: users/views.py:70
