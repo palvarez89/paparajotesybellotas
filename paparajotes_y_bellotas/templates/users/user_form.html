@@ -14,26 +14,30 @@
 
       <div class="normal-box">
           <p>
-          Hola <b>
+          {% trans 'Hola' %} <b>
           {% for invform in invitados.forms %}
-              {% if not forloop.first %}y{% endif %}
-          {{ invform.nombre.value }}{% endfor %},
+              {% if not forloop.first %}{% trans 'y' %}{% endif %}
+              {{ invform.nombre.value }}{% endfor %},
           </b>
           </p>
 
           <br>
 
           <p>
-          Aqui podeis escribir un mensaje que aparecera en la pagina
-          principal en el apartado <b>"Lo que dicen de los novios"</b>
+{% blocktrans %}
+Aqui podéis escribir un mensaje que aparecera en la página
+principal en el apartado <b>"Lo que dicen de los novios"</b>
+{% endblocktrans %}
           </p>
 
           <br>
 
           <p>
-          Tambien, podeis confirmar si quereis una plaza en el autobus,
-          y ademas confirmar asistencia a algunas de las actividades que
-          tenemos programadas.
+{% blocktrans %}
+También, podéis confirmar si queréis una plaza en el autobus.
+Ademas, en unos dias, podréis confirmar asistencia a algunas
+de las actividades que tenemos programadas.
+{% endblocktrans %}
           </p>
       </div>
       <br><br>
@@ -46,9 +50,11 @@
               {% if forloop.first %}
                   <thead>
                   <tr class="row formset_row">
-                      {% for field in invform.visible_fields %}
-                          <th>{{ field.label|capfirst }}</th>
-                      {% endfor %}
+                      <th>{% trans 'Nombre' %}</th>
+                      <th>{% trans 'Confirmada asistencia' %}</th>
+                      <th>{% trans 'Autobus' %}</th>
+                      <th>{% trans 'Llegada' %}</th>
+                      <th>{% trans 'Salida' %}</th>
                   </tr>
                   </thead>
               {% endif %}
@@ -87,7 +93,7 @@
 
       <div class="control-group">
         <div class="controls">
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn btn-primary">{%trans 'Actualizar'%}</button>
         </div>
       </div>
     </form>

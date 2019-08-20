@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-19 22:48+0000\n"
+"POT-Creation-Date: 2019-08-20 07:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -373,6 +373,60 @@ msgstr "Services"
 msgid "Peluquería y maquillaje"
 msgstr "Hair & Make Up"
 
+#: templates/users/user_form.html:17
+msgid "Hola"
+msgstr "Hello"
+
+#: templates/users/user_form.html:19
+msgid "y"
+msgstr "and"
+
+#: templates/users/user_form.html:27
+msgid ""
+"\n"
+"Aqui podéis escribir un mensaje que aparecera en la página\n"
+"principal en el apartado <b>\"Lo que dicen de los novios\"</b>\n"
+msgstr ""
+"\n"
+"Here you can write us a message that will appear in the homepage,\n"
+"in the section <b>\"What people say about the couple \"</b>\n"
+
+#: templates/users/user_form.html:36
+msgid ""
+"\n"
+"También, podéis confirmar si queréis una plaza en el autobus.\n"
+"Ademas, en unos dias, podréis confirmar asistencia a algunas\n"
+"de las actividades que tenemos programadas.\n"
+msgstr ""
+"\n"
+"Aditionally, you can confirm if you need a seat in the bus.\n"
+"Also, in a few days you will be able to RSVP for some activities\n"
+"we have planned.\n"
+
+#: templates/users/user_form.html:53 users/models.py:23
+msgid "Nombre"
+msgstr "Name"
+
+#: templates/users/user_form.html:54 users/models.py:24
+msgid "Confirmada asistencia"
+msgstr "RSVP"
+
+#: templates/users/user_form.html:55 users/models.py:25
+msgid "Autobus"
+msgstr "Bus"
+
+#: templates/users/user_form.html:56 users/models.py:29
+msgid "Llegada"
+msgstr "Arriving"
+
+#: templates/users/user_form.html:57 users/models.py:30
+msgid "Salida"
+msgstr "Leaving"
+
+#: templates/users/user_form.html:96
+msgid "Actualizar"
+msgstr "Update"
+
 #: users/forms.py:36
 msgid "This username has already been taken."
 msgstr ""
@@ -389,18 +443,6 @@ msgstr "Message"
 msgid "Firma"
 msgstr "Signature"
 
-#: users/models.py:23
-msgid "Nombre"
-msgstr "Name"
-
-#: users/models.py:24
-msgid "Confirmada asistencia"
-msgstr "RSVP"
-
-#: users/models.py:25
-msgid "Autobus"
-msgstr "Bus"
-
 #: users/models.py:26
 msgid "Notas"
 msgstr "Notes"
@@ -408,14 +450,6 @@ msgstr "Notes"
 #: users/models.py:27
 msgid "Es menor"
 msgstr "Under-age"
-
-#: users/models.py:29
-msgid "Llegada"
-msgstr "Arriving"
-
-#: users/models.py:30
-msgid "Salida"
-msgstr "Leaving"
 
 #: users/views.py:70
 msgid "Datos actualizados correctamente"
