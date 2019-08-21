@@ -24,7 +24,6 @@ class Invitado(Model):
     asiste = models.BooleanField(_("Confirmada asistencia"), default=False)
     autobus = models.BooleanField(_("Autobus"), default=False)
     notas = models.CharField(_("Notas"), blank=True, max_length=1000)
-    es_menor = models.BooleanField(_("Es menor"), default=False)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     llegada = models.DateField(_("Llegada"), default=datetime.date(2019, 9, 21))
     salida = models.DateField(_("Salida"), default=datetime.date(2019, 9, 21))
