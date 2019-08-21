@@ -28,5 +28,10 @@ class Invitado(Model):
     llegada = models.DateField(_("Llegada"), default=datetime.date(2019, 9, 21))
     salida = models.DateField(_("Salida"), default=datetime.date(2019, 9, 21))
 
+    lunes16velero = models.BooleanField(_("lunes16velero"), default=False)
+    martes17playa = models.BooleanField(_("martes17playa"), default=False)
+    miercoles18comida = models.BooleanField(_("miercoles18comida"), default=False)
+    jueves19playa = models.BooleanField(_("jueves19playa"), default=False)
+
     def __str__(self):
         return "%s (%s)" % (self.nombre, self.user.username)
