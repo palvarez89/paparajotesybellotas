@@ -41,10 +41,13 @@ de las actividades que tenemos programadas.
           </p>
       </div>
       <br><br>
+
       {{ form }}
 
+      <br><br>
+
+      {{ invitados.management_form }}
       <table class="table">
-          {{ invitados.management_form }}
 
           {% for invform in invitados.forms %}
               {% if forloop.first %}
@@ -77,6 +80,42 @@ de las actividades que tenemos programadas.
                   </td>
                   <td>
                       {{ invform.salida }}
+                  </td>
+              </tr>
+          {% endfor %}
+      </table>
+
+      <br><br>
+
+      <table class="table">
+
+          {% for invform in invitados.forms %}
+              {% if forloop.first %}
+                  <thead>
+                  <tr class="row formset_row">
+                      <th>{% trans 'Nombre' %}</th>
+                      <th>{% trans 'Lunes 16 - Velero' %}</th>
+                      <th>{% trans 'Martes 17 - Playa' %}</th>
+                      <th>{% trans 'Miercoles 18 - Al Ayuntamiento!' %}</th>
+                      <th>{% trans 'Jueves 19 - Playa' %}</th>
+                  </tr>
+                  </thead>
+              {% endif %}
+              <tr class="row formset_row">
+                  <td>
+                      {{ invform.nombre.value }}
+                  </td>
+                  <td>
+                      {{ invform.lunes16velero }}
+                  </td>
+                  <td>
+                      {{ invform.martes17playa }}
+                  </td>
+                  <td>
+                      {{ invform.miercoles18comida }}
+                  </td>
+                  <td>
+                      {{ invform.jueves19playa }}
                   </td>
               </tr>
           {% endfor %}
