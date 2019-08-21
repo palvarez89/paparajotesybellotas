@@ -121,6 +121,30 @@ que tenemos programadas.
           {% endfor %}
       </table>
 
+      <br><br>
+
+      <table class="table">
+
+          {% for invform in invitados.forms %}
+              {% if forloop.first %}
+                  <thead>
+                  <tr class="row formset_row">
+                      <th>{% trans 'Nombre' %}</th>
+                      <th>{% trans 'Cuéntanos si tienes alguna alergia o intolerancia' %}</th>
+                  </tr>
+                  </thead>
+              {% endif %}
+              <tr class="row formset_row">
+                  <td>
+                      {{ invform.nombre.value }}
+                  </td>
+                  <td>
+                      {{ invform.notas }}
+                  </td>
+              </tr>
+          {% endfor %}
+      </table>
+
       {% for invform in invitados.forms %}
           {% if invform.errors%}
           <div class="alert alert-danger" role="alert">

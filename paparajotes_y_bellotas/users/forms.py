@@ -41,6 +41,7 @@ InvitadoFormset = inlineformset_factory(
         "martes17playa",
         "miercoles18comida",
         "jueves19playa",
+        "notas",
     ],
     extra=0,
     can_delete=False
