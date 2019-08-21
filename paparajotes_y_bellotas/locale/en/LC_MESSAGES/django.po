@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-20 07:51+0000\n"
+"POT-Creation-Date: 2019-08-21 20:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,12 +109,12 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:19 templates/base.html:85
+#: templates/account/login.html:19 templates/base.html:88
 msgid "Sign In"
 msgstr ""
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
-#: templates/account/logout.html:17 templates/base.html:80
+#: templates/account/logout.html:17 templates/base.html:83
 msgid "Sign Out"
 msgstr ""
 
@@ -255,8 +255,16 @@ msgstr "Our Big Day"
 msgid "Tips"
 msgstr ""
 
-#: templates/base.html:76
+#: templates/base.html:74 templates/pages/theweek.html:19
+msgid "Calendario Social"
+msgstr "Social Calendar"
+
+#: templates/base.html:79
 msgid "My Profile"
+msgstr ""
+
+#: templates/footerbkp.html:15
+msgid "language"
 msgstr ""
 
 #: templates/pages/home.html:9
@@ -295,11 +303,11 @@ msgstr "What people say about the couple"
 msgid "Itinerario"
 msgstr "Agenda"
 
-#: templates/pages/location.html:35
+#: templates/pages/location.html:37
 msgid "Toraixa 56"
 msgstr ""
 
-#: templates/pages/location.html:39
+#: templates/pages/location.html:41
 msgid ""
 "\n"
 "La finca está situada a 3 minutos en coche del centro del municipio des "
@@ -311,7 +319,7 @@ msgstr ""
 "in Spain to see the sun rise, in a rural area, close to the sea and "
 "prehistoric buildings.\n"
 
-#: templates/pages/location.html:45
+#: templates/pages/location.html:47
 msgid ""
 "\n"
 "La ceremonia y la celebración tendrán lugar en esta finca típica menorquina, "
@@ -321,9 +329,70 @@ msgstr ""
 "The ceremony and celebration will happen in this typical Menorcan house, "
 "more than 150 years old, and restored in 2014.\n"
 
-#: templates/pages/location.html:87
+#: templates/pages/location.html:88
 msgid "Cómo llegar"
 msgstr "How to get there"
+
+#: templates/pages/theweek.html:23
+msgid ""
+"\n"
+"Una de las principales razones por las que hemos decidido venir a Menorca es "
+"para poder disfrutar de ella junto a vosotros. Sabemos que muchos de "
+"vosotros vais a venir algunos días antes, por lo que hemos decidido "
+"organizar ciertas actividades a las que os podéis apuntar.\n"
+msgstr ""
+
+#: templates/pages/theweek.html:37
+msgid "Lunes 16 - Ruta en velero"
+msgstr "Monday 16th - Sailing trip"
+
+#: templates/pages/theweek.html:41
+msgid ""
+"\n"
+"Alquilaremos un velero para ir a algunas calas de dificil acceso, practicar "
+"snorkelling y algunas cosas mas. Más informacion en <a href=\"http://www."
+"menorcavela.com\">la web de Menorca a Vela</a>\n"
+msgstr ""
+"\n"
+"We will rent a sailboat to get to some of the most hidden beaches, swim, and "
+"do some snorkelling. More information at <a href=\"http://www."
+"menorcavela.com\">Menorca a Vela's website</a>\n"
+
+
+#: templates/pages/theweek.html:53
+msgid "Martes 17 - Dia de playa"
+msgstr "Tuesday 18 - Beach"
+
+#: templates/pages/theweek.html:57 templates/pages/theweek.html:89
+msgid ""
+"\n"
+"Decidiremos una cala de acceso no muy complicado en la que pasar el dia. Es "
+"recomendable llevar comida y bebida, normalmente no hay ningun tipo de "
+"servicio alrededor, y la idea seria pasar todo el día.\n"
+msgstr ""
+"\n"
+"We will pick a beach to spend the day. It's recommended to bring some drinks "
+"and food as usually there are no services around."
+
+#: templates/pages/theweek.html:69 templates/users/user_form.html:99
+msgid "Miercoles 18 - Al Ayuntamiento!"
+msgstr "Wednesday 18 - To the Town Hall!"
+
+#: templates/pages/theweek.html:73
+msgid ""
+"\n"
+"A las 12 de la mañana tendremos que estar en el Ayuntamiento de Ciudatella, "
+"para casarnos oficialmente. Una vez terminados los trámites legales, llega "
+"la hora de celebrar! Nos gustaría organizar una comida en algún restaurante "
+"rico de la zona y por supuesto que nos acompañéis\n"
+msgstr ""
+"\n"
+"We will get legally married at 12 pm at Ciudatella's Town Hall. After that "
+"we will celebrate with a meal and some drinks. We would love you to join us."
+
+#: templates/pages/theweek.html:85
+msgid "Jueves 19 - Dia de playa"
+msgstr "Tursday 19 - Beach"
 
 #: templates/pages/tips.html:11
 msgid "Dónde alojarse"
@@ -365,11 +434,11 @@ msgstr "Cala San Esteban Area"
 msgid "Zona S'Algar"
 msgstr "S'Algar Area"
 
-#: templates/pages/tips.html:52
+#: templates/pages/tips.html:54
 msgid "Servicios de interés"
 msgstr "Services"
 
-#: templates/pages/tips.html:59
+#: templates/pages/tips.html:61
 msgid "Peluquería y maquillaje"
 msgstr "Hair & Make Up"
 
@@ -395,39 +464,52 @@ msgstr ""
 msgid ""
 "\n"
 "También, podéis confirmar si queréis una plaza en el autobus.\n"
-"Ademas, en unos dias, podréis confirmar asistencia a algunas\n"
-"de las actividades que tenemos programadas.\n"
+"Ademas, podéis confirmar asistencia a algunas de las actividades\n"
+"que tenemos programadas.\n"
 msgstr ""
 "\n"
 "Aditionally, you can confirm if you need a seat in the bus.\n"
-"Also, in a few days you will be able to RSVP for some activities\n"
+"Also, you will be able to RSVP for some activities\n"
 "we have planned.\n"
 
-#: templates/users/user_form.html:53 users/models.py:23
+#: templates/users/user_form.html:56 templates/users/user_form.html:96
+#: users/models.py:23
 msgid "Nombre"
 msgstr "Name"
 
-#: templates/users/user_form.html:54 users/models.py:24
+#: templates/users/user_form.html:57 users/models.py:24
 msgid "Confirmada asistencia"
 msgstr "RSVP"
 
-#: templates/users/user_form.html:55 users/models.py:25
+#: templates/users/user_form.html:58 users/models.py:25
 msgid "Autobus"
 msgstr "Bus"
 
-#: templates/users/user_form.html:56 users/models.py:29
+#: templates/users/user_form.html:59 users/models.py:28
 msgid "Llegada"
 msgstr "Arriving"
 
-#: templates/users/user_form.html:57 users/models.py:30
+#: templates/users/user_form.html:60 users/models.py:29
 msgid "Salida"
 msgstr "Leaving"
 
-#: templates/users/user_form.html:96
+#: templates/users/user_form.html:97
+msgid "Lunes 16 - Velero"
+msgstr "Monday 16th - Sailing trip"
+
+#: templates/users/user_form.html:98
+msgid "Martes 17 - Playa"
+msgstr "Tuesday 17 - Beach"
+
+#: templates/users/user_form.html:100
+msgid "Jueves 19 - Playa"
+msgstr "Thursday 19 - Beach"
+
+#: templates/users/user_form.html:135
 msgid "Actualizar"
 msgstr "Update"
 
-#: users/forms.py:36
+#: users/forms.py:53
 msgid "This username has already been taken."
 msgstr ""
 
@@ -447,9 +529,21 @@ msgstr "Signature"
 msgid "Notas"
 msgstr "Notes"
 
-#: users/models.py:27
-msgid "Es menor"
-msgstr "Under-age"
+#: users/models.py:31
+msgid "lunes16velero"
+msgstr ""
+
+#: users/models.py:32
+msgid "martes17playa"
+msgstr ""
+
+#: users/models.py:33
+msgid "miercoles18comida"
+msgstr ""
+
+#: users/models.py:34
+msgid "jueves19playa"
+msgstr ""
 
 #: users/views.py:70
 msgid "Datos actualizados correctamente"
