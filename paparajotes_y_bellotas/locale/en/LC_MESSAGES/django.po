@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 20:08+0000\n"
+"POT-Creation-Date: 2019-08-21 20:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -336,11 +336,16 @@ msgstr "How to get there"
 #: templates/pages/theweek.html:23
 msgid ""
 "\n"
-"Una de las principales razones por las que hemos decidido venir a Menorca es "
-"para poder disfrutar de ella junto a vosotros. Sabemos que muchos de "
-"vosotros vais a venir algunos días antes, por lo que hemos decidido "
-"organizar ciertas actividades a las que os podéis apuntar.\n"
+"Una de las principales razones por las que hemos decidido celebrar nuestra "
+"boda en Menorca es para poder disfrutar de la isla junto a vosotros. Sabemos "
+"que muchos de vosotros vais a venir algunos días antes, por lo que hemos "
+"decidido organizar ciertas actividades a las que os podéis apuntar.\n"
 msgstr ""
+"\n"
+"One of the reasons why we celebrate our wedding in Menorca is because "
+"we want to enjoy the island with you all. We know that some of you will "
+"be here a few days before the wedding. We are going to organise some "
+"activities and we hope you can join us.\n"
 
 #: templates/pages/theweek.html:37
 msgid "Lunes 16 - Ruta en velero"
@@ -355,9 +360,8 @@ msgid ""
 msgstr ""
 "\n"
 "We will rent a sailboat to get to some of the most hidden beaches, swim, and "
-"do some snorkelling. More information at <a href=\"http://www."
-"menorcavela.com\">Menorca a Vela's website</a>\n"
-
+"do some snorkelling. More information at <a href=\"http://www.menorcavela.com"
+"\">Menorca a Vela's website</a>\n"
 
 #: templates/pages/theweek.html:53
 msgid "Martes 17 - Dia de playa"
@@ -388,7 +392,8 @@ msgid ""
 msgstr ""
 "\n"
 "We will get legally married at 12 pm at Ciudatella's Town Hall. After that "
-"we will celebrate with a meal and some drinks. We would love you to join us.\n"
+"we will celebrate with a meal and some drinks. We would love you to join "
+"us.\n"
 
 #: templates/pages/theweek.html:85
 msgid "Jueves 19 - Dia de playa"
@@ -473,7 +478,7 @@ msgstr ""
 "we have planned.\n"
 
 #: templates/users/user_form.html:56 templates/users/user_form.html:96
-#: users/models.py:23
+#: templates/users/user_form.html:132 users/models.py:23
 msgid "Nombre"
 msgstr "Name"
 
@@ -505,7 +510,11 @@ msgstr "Tuesday 17 - Beach"
 msgid "Jueves 19 - Playa"
 msgstr "Thursday 19 - Beach"
 
-#: templates/users/user_form.html:135
+#: templates/users/user_form.html:133
+msgid "Cuéntanos si tienes alguna alergia o intolerancia"
+msgstr "Let us know if you have any dietary requirements"
+
+#: templates/users/user_form.html:159
 msgid "Actualizar"
 msgstr "Update"
 
