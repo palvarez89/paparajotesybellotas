@@ -372,7 +372,7 @@ msgid ""
 msgstr ""
 "\n"
 "We will pick a beach to spend the day. It's recommended to bring some drinks "
-"and food as usually there are no services around."
+"and food as usually there are no services around.\n"
 
 #: templates/pages/theweek.html:69 templates/users/user_form.html:99
 msgid "Miercoles 18 - Al Ayuntamiento!"
@@ -388,7 +388,7 @@ msgid ""
 msgstr ""
 "\n"
 "We will get legally married at 12 pm at Ciudatella's Town Hall. After that "
-"we will celebrate with a meal and some drinks. We would love you to join us."
+"we will celebrate with a meal and some drinks. We would love you to join us.\n"
 
 #: templates/pages/theweek.html:85
 msgid "Jueves 19 - Dia de playa"
