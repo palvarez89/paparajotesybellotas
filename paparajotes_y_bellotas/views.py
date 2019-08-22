@@ -1,3 +1,4 @@
+import logging
 import os
 import random
 import urllib
@@ -6,6 +7,8 @@ from django.contrib.messages import get_messages
 from django.shortcuts import render
 
 from paparajotes_y_bellotas.users import models
+
+logger = logging.getLogger(__name__)
 
 def location_view(request):
     dirpath = os.path.dirname(os.path.realpath(__file__))
@@ -22,7 +25,9 @@ def homepage_view(request):
     query_results = models.User.objects.all()
     storage = get_messages(request)
 
+    logger.debug("Loading quotes")
     quotes = [{'mensaje': u.mensaje, 'firma': u.firma} for u in query_results if len(u.mensaje) > 4]
+    logger.debug("quotes %s" % quotes)
 
     random.shuffle(quotes)
     return render(request, 'pages/home.html', {'quotes': quotes, 'messages': storage})
