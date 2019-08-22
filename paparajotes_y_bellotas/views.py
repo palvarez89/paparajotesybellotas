@@ -27,6 +27,7 @@ def homepage_view(request):
 
     logger.debug("Loading quotes")
     quotes = [{'mensaje': u.mensaje, 'firma': u.firma} for u in query_results if len(u.mensaje) > 4]
+    logger.debug("Loaded %s quotes" % len(quotes))
     logger.debug("quotes %s" % quotes)
 
     random.shuffle(quotes)
