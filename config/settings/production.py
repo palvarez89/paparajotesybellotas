@@ -169,7 +169,7 @@ LOGGING = {
             'level': 'DEBUG',
         },
         '': {
-            'handlers': ['log_file', 'error_log_file'],
+            'handlers': ['debug_log_file', 'log_file', 'error_log_file'],
             'level': 'DEBUG',
         },
     }
