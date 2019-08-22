@@ -3,7 +3,7 @@ import os
 import yaml
 import sys
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
 django.setup()
 
 from django.contrib.auth.hashers import make_password
