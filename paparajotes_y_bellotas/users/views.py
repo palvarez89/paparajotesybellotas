@@ -1,7 +1,9 @@
+import csv
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
+from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, ListView, RedirectView, UpdateView
@@ -38,6 +40,32 @@ class UserListView(StaffRequiredMixin, ListView):
 
 
 user_list_view = UserListView.as_view()
+
+
+@staff_member_required
+def user_list_view_csv(request):
+    # Create the HttpResponse object with the appropriate CSV header.
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+    query_results = models.Invitado.objects.all()
+
+    writer = csv.writer(response)
+    writer.writerow(['Nombre', 'Asiste', 'Llegada', 'Salida', 'Autobus', 'Lunes', 'Martes', 'Miercoles', 'Jueves'])
+    for i in query_results:
+        details = []
+        details.append(i.nombre)
+        details.append(i.asiste)
+        details.append(i.llegada)
+        details.append(i.salida)
+        details.append(i.autobus)
+        details.append(i.lunes16velero)
+        details.append(i.martes17playa)
+        details.append(i.miercoles18comida)
+        details.append(i.jueves19playa)
+        writer.writerow(details)
+
+    return response
 
 
 class UserUpdateView(LoginRequiredMixin, UpdateView):
