@@ -46,7 +46,7 @@ user_list_view = UserListView.as_view()
 def user_list_view_csv(request):
     # Create the HttpResponse object with the appropriate CSV header.
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+    response['Content-Disposition'] = 'attachment; filename="invitados.csv"'
 
     query_results = models.Invitado.objects.all()
 
