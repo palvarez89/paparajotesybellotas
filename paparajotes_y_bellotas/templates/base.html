@@ -74,19 +74,24 @@
                         <a class="nav-item" href="{% url 'theweek' %}">{% trans "Calendario Social" %}</a>
                     </li>
                     {% if request.user.is_authenticated %}
-                    <li class="nav-item">
-                    {# URL provided by django-allauth/account/urls.py #}
-                        <a class="nav-link" href="{% url 'users:update' %}">{% trans "My Profile" %}</a>
-                    </li>
-                    <li class="nav-item">
-                    {# URL provided by django-allauth/account/urls.py #}
-                        <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-                    </li>
+                        {% if request.user.is_superuser %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:list' %}">{% trans "Invitados" %}</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:update' %}">{% trans "My Profile" %}</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item">
+                        {# URL provided by django-allauth/account/urls.py #}
+                            <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+                        </li>
                     {% else %}
-                    <li class="nav-item">
-                    {# URL provided by django-allauth/account/urls.py #}
-                        <a id="log-in-link" class="nav-item" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-                    </li>
+                        <li class="nav-item">
+                        {# URL provided by django-allauth/account/urls.py #}
+                            <a id="log-in-link" class="nav-item" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+                        </li>
                     {% endif %}
                 </ul>
             </div>
