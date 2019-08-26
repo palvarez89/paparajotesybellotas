@@ -1,17 +1,40 @@
 {% extends "base.html" %}
 {% load static i18n %}
-{% block title %}Members{% endblock %}
+{% block title %}Invitados{% endblock %}
 
 {% block content %}
-<div class="container">
-  <h2>Users</h2>
+<section class="box-content box-2">
+  <div class="container">
+    <h2>Invitados</h2>
 
-  <div class="list-group">
-    {% for user in user_list %}
-      <a href="{% url 'users:detail' user.username %}" class="list-group-item">
-        <h4 class="list-group-item-heading">{{ user.username }}</h4>
-      </a>
-    {% endfor %}
+    <table style="width:100%">
+      <tr>
+        <th>Nombre</th>
+        <th>Asiste</th>
+        <th>Llegada</th>
+        <th>Salida</th>
+        <th>Autobus</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+      </tr>
+        {% for user in user_list %}
+          {% for invitado in user.invitado_set.all %}
+            <tr>
+              <td>{{ invitado}}</td>
+              <td>{{ invitado.asiste }}</td>
+              <td>{{ invitado.llegada }}</td>
+              <td>{{ invitado.salida }}</td>
+              <td>{{ invitado.autobus }}</td>
+              <td>{{ invitado.lunes16velero }}</td>
+              <td>{{ invitado.martes17playa }}</td>
+              <td>{{ invitado.miercoles18comida }}</td>
+              <td>{{ invitado.jueves19playa }}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+    </table>
   </div>
-</div>
+</section>
 {% endblock content %}
