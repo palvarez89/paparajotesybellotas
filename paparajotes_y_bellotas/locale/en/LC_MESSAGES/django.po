@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 20:36+0000\n"
+"POT-Creation-Date: 2019-09-10 15:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,12 +109,12 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:19 templates/base.html:88
+#: templates/account/login.html:19 templates/base.html:93
 msgid "Sign In"
 msgstr ""
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
-#: templates/account/logout.html:17 templates/base.html:83
+#: templates/account/logout.html:17 templates/base.html:88
 msgid "Sign Out"
 msgstr ""
 
@@ -255,16 +255,16 @@ msgstr "Our Big Day"
 msgid "Tips"
 msgstr ""
 
-#: templates/base.html:74 templates/pages/theweek.html:19
+#: templates/base.html:74 templates/pages/theweek.html:17
 msgid "Calendario Social"
 msgstr "Social Calendar"
 
 #: templates/base.html:79
-msgid "My Profile"
+msgid "Invitados"
 msgstr ""
 
-#: templates/footerbkp.html:15
-msgid "language"
+#: templates/base.html:83
+msgid "My Profile"
 msgstr ""
 
 #: templates/pages/home.html:9
@@ -333,7 +333,7 @@ msgstr ""
 msgid "Cómo llegar"
 msgstr "How to get there"
 
-#: templates/pages/theweek.html:23
+#: templates/pages/theweek.html:21
 msgid ""
 "\n"
 "Una de las principales razones por las que hemos decidido celebrar nuestra "
@@ -342,16 +342,16 @@ msgid ""
 "decidido organizar ciertas actividades a las que os podéis apuntar.\n"
 msgstr ""
 "\n"
-"One of the reasons why we celebrate our wedding in Menorca is because "
-"we want to enjoy the island with you all. We know that some of you will "
-"be here a few days before the wedding. We are going to organise some "
-"activities and we hope you can join us.\n"
+"One of the reasons why we celebrate our wedding in Menorca is because we "
+"want to enjoy the island with you all. We know that some of you will be here "
+"a few days before the wedding. We are going to organise some activities and "
+"we hope you can join us.\n"
 
-#: templates/pages/theweek.html:37
+#: templates/pages/theweek.html:35
 msgid "Lunes 16 - Ruta en velero"
 msgstr "Monday 16th - Sailing trip"
 
-#: templates/pages/theweek.html:41
+#: templates/pages/theweek.html:39
 msgid ""
 "\n"
 "Alquilaremos un velero para ir a algunas calas de dificil acceso, practicar "
@@ -363,11 +363,11 @@ msgstr ""
 "do some snorkelling. More information at <a href=\"http://www.menorcavela.com"
 "\">Menorca a Vela's website</a>\n"
 
-#: templates/pages/theweek.html:53
+#: templates/pages/theweek.html:51
 msgid "Martes 17 - Dia de playa"
 msgstr "Tuesday 18 - Beach"
 
-#: templates/pages/theweek.html:57 templates/pages/theweek.html:89
+#: templates/pages/theweek.html:55 templates/pages/theweek.html:87
 msgid ""
 "\n"
 "Decidiremos una cala de acceso no muy complicado en la que pasar el dia. Es "
@@ -378,11 +378,11 @@ msgstr ""
 "We will pick a beach to spend the day. It's recommended to bring some drinks "
 "and food as usually there are no services around.\n"
 
-#: templates/pages/theweek.html:69 templates/users/user_form.html:99
+#: templates/pages/theweek.html:67 templates/users/user_form.html:99
 msgid "Miercoles 18 - Al Ayuntamiento!"
 msgstr "Wednesday 18 - To the Town Hall!"
 
-#: templates/pages/theweek.html:73
+#: templates/pages/theweek.html:71
 msgid ""
 "\n"
 "A las 12 de la mañana tendremos que estar en el Ayuntamiento de Ciudatella, "
@@ -395,55 +395,307 @@ msgstr ""
 "we will celebrate with a meal and some drinks. We would love you to join "
 "us.\n"
 
-#: templates/pages/theweek.html:85
+#: templates/pages/theweek.html:83
 msgid "Jueves 19 - Dia de playa"
 msgstr "Tursday 19 - Beach"
 
+#: templates/pages/theweek.html:99
+msgid "Viernes 20 - Pre-Boda"
+msgstr "Friday 20 - Pre-wedding"
+
+#: templates/pages/theweek.html:103
+msgid ""
+"\n"
+"A partir de las 20.00 hasta las 22.30 cena fría y cervezas en Toraixa. Os y "
+"nos conocemos, este plan no se nos puede ir de las manos. A partir de las "
+"22.30 empezaremos a usar duras técnicas disuasorias si es necesario.\n"
+msgstr ""
+"\n"
+"Since 8pm until 10.30pm we will have some beers and cold dinner at the "
+"venue, in Toraixa. Time to meet everybody. This night cannot get out of "
+"control, so at around 10:30pm we will start asking everyone to leave.\n"
+
 #: templates/pages/tips.html:11
+msgid "Las Calas que más nos gustan de Menorca"
+msgstr ""
+
+#: templates/pages/tips.html:15
+msgid ""
+"\n"
+"En Menorca hay que andar para llegar a las calas, en algunos casos mucho y "
+"los caminos pueden ser bastante complicados. Usa calzado cómodo para las "
+"caminatas (calzado de trekking, deportivos, escarpines...etc)\n"
+msgstr ""
+
+#: templates/pages/tips.html:20
+msgid ""
+"\n"
+"Los parkings cercanos a algunas calas se llenan enseguida, por lo que hay "
+"que intentar llegar pronto. A partir de las 10.00 - 11.00 en pleno verano "
+"los parking están completos, quizá tengamos algo más de suerte en "
+"Septiembre.\n"
+msgstr ""
+
+#: templates/pages/tips.html:25
+msgid ""
+"\n"
+"Las calas escondidas y playas vírgenes no tienen ningún tipo de servicio "
+"(como debe ser!) más vale que lleves comida y bebida contigo si quieres "
+"pasar el dia.\n"
+msgstr ""
+
+#: templates/pages/tips.html:39
+msgid ""
+"\n"
+"1. Binidali,\n"
+msgstr ""
+
+#: templates/pages/tips.html:46
+msgid ""
+"\n"
+"Sin duda nuestra cala! Muy cerquita de Benibeca.\n"
+msgstr ""
+
+#: templates/pages/tips.html:60
+msgid ""
+"\n"
+"2. Pregonda (Norte)\n"
+msgstr ""
+
+#: templates/pages/tips.html:66
+msgid ""
+"\n"
+"Es una playa especial para nosotros, es super bonita y tranquila.\n"
+msgstr ""
+
+#: templates/pages/tips.html:72
+msgid ""
+"\n"
+"Lleva comida y bebida para pasar el dia.\n"
+msgstr ""
+
+#: templates/pages/tips.html:87
+msgid ""
+"\n"
+"3. Cala Escorxada (Sur)\n"
+msgstr ""
+
+#: templates/pages/tips.html:93
+msgid ""
+"\n"
+"Es la gran desconocida del sur, muy poca gente la visita sobre todo porque "
+"hay que andar al menos una hora para llegar, eso sí las vistas durante el "
+"camino son inigualables.\n"
+msgstr ""
+
+#: templates/pages/tips.html:99
+msgid ""
+"\n"
+"Nos la recomendó una chica de Menorca, es la favorita de muchos "
+"menorquines.\n"
+msgstr ""
+
+#: templates/pages/tips.html:105
+msgid ""
+"\n"
+"Es un destino frecuente de barcos que fondean cuando sopla viento norte.\n"
+"No hay servicios de ningún tipo.\n"
+msgstr ""
+
+#: templates/pages/tips.html:121
+msgid ""
+"\n"
+"4. Es Talaier (Sur)\n"
+msgstr ""
+
+#: templates/pages/tips.html:128
+msgid ""
+"\n"
+"Es el prototipo de playa del sur de Menorca. Arena fina y agua turquesa! Es "
+"como una piscina natural!\n"
+msgstr ""
+
+#: templates/pages/tips.html:134
+msgid ""
+"\n"
+"Para llegar tienes que hacer excursión desde Son Saura, la playa es bastante "
+"pequeña y en plena temporada de verano suele estar llena… aún así, merece la "
+"pena una visita.\n"
+msgstr ""
+
+#: templates/pages/tips.html:149
+msgid ""
+"\n"
+"5. Cavalleria (Norte).\n"
+msgstr ""
+
+#: templates/pages/tips.html:156
+msgid ""
+"\n"
+"Una playa preciosa de arena roja.\n"
+msgstr ""
+
+#: templates/pages/tips.html:162
+msgid ""
+"\n"
+"Es muy visitada por varias razones, se encuentra en un espacio natural "
+"único, está en el paso de Camí de Cavalls y tiene un parking a solo 5 "
+"minutos de la playa.\n"
+msgstr ""
+
+#: templates/pages/tips.html:168
+msgid ""
+"\n"
+"Tambien podeis visitar el Faro de Cavalleria que está muy cerca y las vistas "
+"son super bonitas.\n"
+msgstr ""
+
+#: templates/pages/tips.html:183
+msgid ""
+"\n"
+"6. Cala en Turqueta\n"
+msgstr ""
+
+#: templates/pages/tips.html:190
+msgid ""
+"\n"
+"Si tuviéramos que elegir una sola cala.. No podríamos! Pero Cala en Turqueta "
+"seguro que sería una de las candidatas!\n"
+msgstr ""
+
+#: templates/pages/tips.html:196
+msgid ""
+"\n"
+"La hemos visitado mucho desde nuestros primeros viajes a Menorca.\n"
+msgstr ""
+
+#: templates/pages/tips.html:211
+msgid ""
+"\n"
+"7. Cala Mitjana (y Mitjaneta)\n"
+msgstr ""
+
+#: templates/pages/tips.html:218
+msgid ""
+"\n"
+"Playa de aguas turquesas y transparentes, rodeada de pinos.\n"
+msgstr ""
+
+#: templates/pages/tips.html:233
+msgid ""
+"\n"
+"8. Cala Trebaluger\n"
+msgstr ""
+
+#: templates/pages/tips.html:240
+msgid ""
+"\n"
+"Cala virgen que está a 40 minutos siguiendo un camino que se toma desde la "
+"izquierda desde Mitjana, con la ayuda de unos escalones de piedra. Hay que "
+"subir una fuerte pendiente hasta llegara lo alto del acantilado.\n"
+msgstr ""
+
+#: templates/pages/tips.html:246
+msgid ""
+"\n"
+"Desde alli un camino plano, dominado por un bosque de pinos te llevará hasta "
+"cala Trebaluger.\n"
+msgstr ""
+
+#: templates/pages/tips.html:252
+msgid ""
+"\n"
+"Para acceder a la playa deberás bajar por otro tramo con bastante desnivel y "
+"más escalones de piedra.\n"
+msgstr ""
+
+#: templates/pages/tips.html:258
+msgid ""
+"\n"
+"Si continuas andando desde Cala Trebaluger, llegamos a nuestra preferida "
+"número 3 Escorxada!\n"
+msgstr ""
+
+#: templates/pages/tips.html:264
+msgid ""
+"\n"
+"Por supuesto hay muchas otras, igual de bonitas pero queríamos compartir "
+"nuestras favoritas con vosotros.\n"
+msgstr ""
+
+#: templates/pages/tips.html:273
+msgid ""
+"\n"
+"Otras:\n"
+msgstr ""
+
+#: templates/pages/tips.html:280
+msgid ""
+"\n"
+"Las famosas Macarella y Macarelleta, sin duda las playas más populares de "
+"Menorca.\n"
+msgstr ""
+
+#: templates/pages/tips.html:286
+msgid ""
+"\n"
+"Otras que aún no conocemos, y eso nos encanta, que a pesar del número de "
+"veces que hemos visitado la isla aún queda mucho por descubrir! Cala "
+"Presili, Cala Pilar, Binigaus Y Santo Tomás.\n"
+msgstr ""
+
+#: templates/pages/tips.html:292
+msgid ""
+"\n"
+"Algunas de fácil acceso: Pla de Son Bou, playa de Cala en Porter, playa de "
+"Bininequer, Cala Punta Prima\n"
+msgstr ""
+
+#: templates/pages/tips.html:311
 msgid "Dónde alojarse"
 msgstr "Where to stay"
 
-#: templates/pages/tips.html:18
+#: templates/pages/tips.html:318
 msgid "Agroturismo"
 msgstr "Agrotourism"
 
-#: templates/pages/tips.html:26
+#: templates/pages/tips.html:326
 msgid "En el centro de Maó"
 msgstr "Mahon city centre"
 
-#: templates/pages/tips.html:32
+#: templates/pages/tips.html:332
 msgid "Cerca de la playa"
 msgstr "Near the beach"
 
-#: templates/pages/tips.html:39
+#: templates/pages/tips.html:339
 msgid "Otras zonas"
 msgstr "Other areas"
 
-#: templates/pages/tips.html:40
+#: templates/pages/tips.html:340
 msgid "Zona Villacarlos"
 msgstr "Villacarlos Area"
 
-#: templates/pages/tips.html:41
+#: templates/pages/tips.html:341
 msgid "Zona Mahón"
 msgstr "Mahón Area"
 
-#: templates/pages/tips.html:42
+#: templates/pages/tips.html:342
 msgid "Zona Santa Ana y Sol del Este"
 msgstr "Santa Ana and Sol del Este Areas"
 
-#: templates/pages/tips.html:43
+#: templates/pages/tips.html:343
 msgid "Zona Cala San Esteban"
 msgstr "Cala San Esteban Area"
 
-#: templates/pages/tips.html:44
+#: templates/pages/tips.html:344
 msgid "Zona S'Algar"
 msgstr "S'Algar Area"
 
-#: templates/pages/tips.html:54
+#: templates/pages/tips.html:354
 msgid "Servicios de interés"
 msgstr "Services"
 
-#: templates/pages/tips.html:61
+#: templates/pages/tips.html:361
 msgid "Peluquería y maquillaje"
 msgstr "Hair & Make Up"
 
@@ -478,7 +730,7 @@ msgstr ""
 "we have planned.\n"
 
 #: templates/users/user_form.html:56 templates/users/user_form.html:96
-#: templates/users/user_form.html:132 users/models.py:23
+#: templates/users/user_form.html:136 users/models.py:23
 msgid "Nombre"
 msgstr "Name"
 
@@ -510,15 +762,19 @@ msgstr "Tuesday 17 - Beach"
 msgid "Jueves 19 - Playa"
 msgstr "Thursday 19 - Beach"
 
-#: templates/users/user_form.html:133
+#: templates/users/user_form.html:101
+msgid "Viernes 20 - Pre-boda"
+msgstr "Friday 20 - Pre-wedding"
+
+#: templates/users/user_form.html:137
 msgid "Cuéntanos si tienes alguna alergia o intolerancia"
 msgstr "Let us know if you have any dietary requirements"
 
-#: templates/users/user_form.html:159
+#: templates/users/user_form.html:163
 msgid "Actualizar"
 msgstr "Update"
 
-#: users/forms.py:53
+#: users/forms.py:54
 msgid "This username has already been taken."
 msgstr ""
 
@@ -554,10 +810,14 @@ msgstr ""
 msgid "jueves19playa"
 msgstr ""
 
-#: users/views.py:70
+#: users/models.py:35
+msgid "viernes20preboda"
+msgstr ""
+
+#: users/views.py:99
 msgid "Datos actualizados correctamente"
 msgstr "Updated successfully"
 
-#: users/views.py:73
+#: users/views.py:102
 msgid "Fallo al enviar los datos, revisa el formulario"
 msgstr "Failed to update, please check the form"
