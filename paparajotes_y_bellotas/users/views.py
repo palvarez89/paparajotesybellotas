@@ -51,7 +51,7 @@ def user_list_view_csv(request):
     query_results = models.Invitado.objects.all()
 
     writer = csv.writer(response)
-    writer.writerow(['Nombre', 'Asiste', 'Llegada', 'Salida', 'Autobus', 'Lunes', 'Martes', 'Miercoles', 'Jueves'])
+    writer.writerow(['Nombre', 'Asiste', 'Llegada', 'Salida', 'Autobus', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'])
     for i in query_results:
         details = []
         details.append(i.nombre)
@@ -63,6 +63,7 @@ def user_list_view_csv(request):
         details.append(i.martes17playa)
         details.append(i.miercoles18comida)
         details.append(i.jueves19playa)
+        details.append(i.viernes20preboda)
         writer.writerow(details)
 
     return response

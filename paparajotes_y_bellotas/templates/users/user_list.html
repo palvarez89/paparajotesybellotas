@@ -19,6 +19,7 @@
         <th>Martes</th>
         <th>Miercoles</th>
         <th>Jueves</th>
+        <th>Viernes</th>
       </tr>
         {% for user in user_list %}
           {% for invitado in user.invitado_set.all %}
@@ -32,6 +33,7 @@
               <td>{{ invitado.martes17playa }}</td>
               <td>{{ invitado.miercoles18comida }}</td>
               <td>{{ invitado.jueves19playa }}</td>
+              <td>{{ invitado.viernes20preboda }}</td>
             </tr>
           {% endfor %}
         {% endfor %}
