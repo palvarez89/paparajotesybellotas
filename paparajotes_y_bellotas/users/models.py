@@ -32,6 +32,7 @@ class Invitado(Model):
     martes17playa = models.BooleanField(_("martes17playa"), default=False)
     miercoles18comida = models.BooleanField(_("miercoles18comida"), default=False)
     jueves19playa = models.BooleanField(_("jueves19playa"), default=False)
+    viernes20preboda = models.BooleanField(_("viernes20preboda"), default=False)
 
     def __str__(self):
         return "%s (%s)" % (self.nombre, self.user.username)
